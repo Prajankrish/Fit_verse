@@ -66,6 +66,7 @@ export default function FittingRoomPage() {
         .then(([style, color]) => {
           setStyleRecs(style);
           setColorRecs(color);
+          
         })
         .catch(console.error)
         .finally(() => setRecsLoading(false));
