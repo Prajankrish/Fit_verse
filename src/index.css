@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 180 20% 99%;
+    --foreground: 220 20% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 14%;
+
+    --primary: 0 100% 71%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 170 56% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 180 10% 95%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 50 100% 71%;
+    --accent-foreground: 220 20% 14%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 180 10% 90%;
+    --input: 180 10% 90%;
+    --ring: 0 100% 71%;
+
+    --radius: 0.75rem;
+
+    --electric: 217 100% 65%;
+    --electric-foreground: 0 0% 100%;
+    --purple: 283 39% 53%;
+    --purple-foreground: 0 0% 100%;
+
+    --sidebar-background: 180 15% 97%;
+    --sidebar-foreground: 220 20% 14%;
+    --sidebar-primary: 0 100% 71%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 170 56% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 180 10% 90%;
+    --sidebar-ring: 0 100% 71%;
+
+    /* Skin tones */
+    --skin-1: 30 80% 92%;
+    --skin-2: 28 65% 82%;
+    --skin-3: 25 55% 72%;
+    --skin-4: 22 50% 62%;
+    --skin-5: 20 45% 52%;
+    --skin-6: 18 40% 42%;
+    --skin-7: 16 35% 32%;
+    --skin-8: 14 30% 22%;
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 180 10% 95%;
+    --card: 220 20% 12%;
+    --card-foreground: 180 10% 95%;
+    --popover: 220 20% 12%;
+    --popover-foreground: 180 10% 95%;
+    --primary: 0 100% 71%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 170 56% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 180 10% 60%;
+    --accent: 50 100% 71%;
+    --accent-foreground: 220 20% 14%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 0 100% 71%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .gradient-coral-teal {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  }
+  .gradient-warm {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  }
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glass {
+    background: hsla(0, 0%, 100%, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}

@@ -1,0 +1,4019 @@
+{
+  "garments": [
+    {
+      "id": "myntra_1",
+      "name": "Men Solid Oversized Cotton",
+      "brand": "Difference of Opinion",
+      "category": "tops",
+      "price": 6.41,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16407468/2021/12/28/fce7ca1e-01ec-4c12-a90f-c7b75abda0e01640669480687-Difference-of-Opinion-Men-Tshirts-4021640669480120-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_2",
+      "name": "Men Cotton Pure Cotton T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 34.5,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1996777/2022/11/22/336445a8-fa32-4396-914a-2629b49465d31669112704759RoadsterMenBlackCottonPureCottonT-shirt1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_3",
+      "name": "Women Pure Cotton T-shirt",
+      "brand": "DILLINGER",
+      "category": "tops",
+      "price": 6.64,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15598180/2022/2/4/0cae0b47-0ae6-4bec-aa2f-a00a5624c3a11643957685405-DILLINGER-Women-Navy-Blue-Typography-Printed-Pure-Cotton-Loo-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 8,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_4",
+      "name": "Typography Print T-shirt",
+      "brand": "Huetrap",
+      "category": "tops",
+      "price": 15.99,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/12/12/1aab2a18-6774-4f83-b292-fe301755a3351576102551329-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 6,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_5",
+      "name": "Printed Round Neck Pure Cotton T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 5.95,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11545192/2022/3/25/626b0419-cbb0-4200-8490-67e20a0021c51648208612203-Roadster-Men-Green--White-Printed-Round-Neck-Pure-Cotton-T-s-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_6",
+      "name": "Boys Pack of 5 T-shirt",
+      "brand": "HELLCAT",
+      "category": "tops",
+      "price": 8.42,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17137560/2022/2/11/4dd42ff2-7468-4bcc-a4a2-f0994b2d01751644582207769HellcatBoysRoundNeckBlendedCottonTshirt-ComboPackof51.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 5,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_7",
+      "name": "Polo Collar Cotton Pure Cotton T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 5.41,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1996801/2018/8/3/15c9e328-62bd-49ea-8cbd-7bc2047ba02f1533279315890-Roadster-Men-Black-Solid-Polo-Collar-T-shirt-836153327931345-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 8,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_8",
+      "name": "Boys Pack Of 5 Printed T-shirt",
+      "brand": "HELLCAT",
+      "category": "tops",
+      "price": 8.42,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17137550/2022/2/11/b124b0f4-830d-44ed-a669-e8585d66cf4f1644579708683HellcatBoysRoundNeckBlendedCottonTshirt-ComboPackof51.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_9",
+      "name": "Printed Pure Cotton T-shirt",
+      "brand": "HRX by Hrithik Roshan",
+      "category": "tops",
+      "price": 34.5,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1700871/2020/1/22/f932ae44-0fb8-4b92-b7bc-f1756253294b1579692118186-HRX-by-Hrithik-Roshan-Men-Teal-Blue-Printed-T-shirt-90515796-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 8,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_10",
+      "name": "Printed Round Neck Pure Cotton T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 24.99,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12193826/2020/10/13/e5880ee7-80af-4405-ae9f-7760b22a34621602571369433-Roadster-Women-Tshirts-1601602571367968-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_11",
+      "name": "Printed Round Neck Pure Cotton T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 5.05,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10968510/2020/2/4/604f209c-9256-4c8a-b018-f15d46a9fdb11580792216828-Roadster-Women-Tshirts-8821580792215054-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_12",
+      "name": "Longline T-shirt with Raw Edge",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 5.58,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1824340/2017/8/3/11501764560457-Roadster-Men-Grey-Melange-Solid-Round-Neck-T-shirt-3291501764560241-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_13",
+      "name": "Printed Oversized Pure Cotton T-shirt",
+      "brand": "DILLINGER",
+      "category": "tops",
+      "price": 6.64,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13930788/2021/8/6/38d6c0e3-cda3-4059-a673-2cdb0bafae181628241011946-DILLINGER-Women-Tshirts-8941628241011571-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_14",
+      "name": "Men Camouflage Printed Loose T-shirt",
+      "brand": "VEIRDO",
+      "category": "tops",
+      "price": 5.77,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17868156/2022/4/12/4084bedc-aa91-40c8-bed9-e8e74bbdd5f31649779743002VEIRDOMenWhiteCamouflagePrintedMonochromeLooseT-shirt1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 3,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_15",
+      "name": "Time Travlr Sleveless Pure Cotton T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 34.5,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2498517/2018/5/11/d485cf97-7835-446f-b637-a98ac6fe2a291526023388617-Roadster-Men-Olive-Green-Solid-Round-Neck-T-shirt-4761526023388386-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 6,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_16",
+      "name": "Men Striped Polo Collar T-shirt",
+      "brand": "Louis Philippe Sport",
+      "category": "tops",
+      "price": 14.45,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/20324896/2022/10/27/2215b2bf-a2c1-424b-aaa6-befb8b78467c1666867734904-Louis-Philippe-Sport-Men-Tshirts-3571666867734363-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 8,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_17",
+      "name": "Men Striped Polo Collar T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 24.99,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/9973475/2022/11/14/b5639b13-e56a-4b59-8756-7e8b36c7775f1668419486394-Roadster-Men-Black--Grey-Striped-Polo-Collar-Pure-Cotton-T-s-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_18",
+      "name": "Henley Neck T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 24.99,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1996770/2018/2/8/11518088823846-Roadster-Men-Rust-Solid-Henley-Neck-T-shirt-7631518088823602-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_19",
+      "name": "Typography Cotton T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 34.5,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2308267/2018/1/29/11517216335231-Roadster-Men-Maroon-Printed-Round-Neck-T-shirt-5591517216335098-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_20",
+      "name": "Women Candy Stripes T-shirt",
+      "brand": "Moda Rapido",
+      "category": "tops",
+      "price": 5.95,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/14140704/2021/9/24/a9cf5fed-e30d-4397-8fee-700d540058ed1632481604682-Moda-Rapido-Women-Multicoloured-Candy-Stripes-Drop-Shoulder--1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_21",
+      "name": "Printed Cotton Pure Cotton T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 34.5,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2297835/2018/3/14/11521020286596-Roadster-Men-Tshirts-4241521020286395-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_22",
+      "name": "Cotton Oversized T-Shirt",
+      "brand": "DILLINGER",
+      "category": "tops",
+      "price": 6.57,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17132720/2022/6/20/7748f30c-e08f-4359-8524-9d8f7d3135281655722336851-DILLINGER-Women-Blue-Printed-Pure-Cotton-Loose-Graphic-Overs-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_23",
+      "name": "Solid Round Neck T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 15.99,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2475892/2018/4/3/11522732991435-Roadster-Men-Black-Solid-Round-Neck-T-shirt-1531522732991218-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_24",
+      "name": "Printed Cotton Pure Cotton T-shirt",
+      "brand": "HRX by Hrithik Roshan",
+      "category": "tops",
+      "price": 15.99,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1700944/2019/6/8/488007ef-c65e-4a2f-a92b-65b6846894861559989274078-HRX-by-Hrithik-Roshan-Men-Yellow-Printed-Round-Neck-T-Shirt--1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_25",
+      "name": "Slim Tropical Printed Pure Cotton T-shirt",
+      "brand": "Urbano Fashion",
+      "category": "tops",
+      "price": 5.55,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12377258/2020/9/11/ce1b7bcb-a65a-4eb0-a317-42ac02718f1e1599798741705UrbanoFashionPrintedMenRoundNeckDarkGreenT-Shirt1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 6,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_26",
+      "name": "Men Polo Collar Slim Fit T-shirt",
+      "brand": "U.S. Polo Assn.",
+      "category": "tops",
+      "price": 20.47,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/19446216/2022/9/28/8e26fdd4-6af7-48b6-a037-bec1ceb6c6251664359967155TshirtsUSPoloAssnMenTshirtsUSPoloAssnMenShirtsUSPoloAssnMenS1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 3,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_27",
+      "name": "Colourblocked Pure Cotton",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 34.5,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13622286/2021/2/18/f58cb66f-5e6e-48a5-8395-c695410628811613644559259-Roadster-Men-Green-Colourblocked-Round-Neck-T-shirt-18316136-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 5,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_28",
+      "name": "Men Printed Football T-shirt",
+      "brand": "Puma",
+      "category": "tops",
+      "price": 46.37,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/18982090/2022/7/19/e618a91f-c4a3-48ea-9ea0-0d105025b5de1658232227623-Manchester-City-FC--Home-Jersey-Replica-2891658232227240-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_29",
+      "name": "Colourblocked Raw Edge T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 24.99,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2215210/2018/1/22/11516616541193-Roadster-Men-Beige-Colourblocked-Round-Neck-T-shirt-8181516616541016-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_30",
+      "name": "Polo Collar Cotton Pure Cotton T-shirt",
+      "brand": "HERE&NOW",
+      "category": "tops",
+      "price": 5.47,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/7546900/2019/1/24/c9be0d6e-30a4-4242-b4e0-1c166b73f2781548320874402-HERENOW-Men-Polo-Collar-T-shirt-4861548320873235-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_31",
+      "name": "Women Typography Printed Loose T-shirt",
+      "brand": "DILLINGER",
+      "category": "tops",
+      "price": 6.31,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/18771364/2022/7/21/3dd4dcc8-3ae4-4f67-a00e-235810d3508e1658395210493-DILLINGER-Women-Tshirts-6481658395209874-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_32",
+      "name": "Curl Edge Cotton T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 15.99,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/3314141/2018/5/19/e55c2244-8515-44d5-93da-d719f3f8d4551526706357637-Roadster-Men-Tshirts-6461526706356615-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 6,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_33",
+      "name": "Men Colourblocked Polo Collar T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 5.41,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22547618/2023/4/4/1efd237a-b32d-4aad-8953-00ee8afbdf101680608437126-Roadster-Men-Tshirts-6241680608436697-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 8,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_34",
+      "name": "Men Solid Pure Cotton T-shirt",
+      "brand": "Nautica",
+      "category": "tops",
+      "price": 15.65,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10984594/2020/4/6/7e7570b8-9ff1-448a-b8e1-f5fbadf232d51586163159057-Nautica-Men-Tshirts-2011586163156988-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_35",
+      "name": "Drop Shoulder Longline T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 15.99,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1824339/2022/4/18/ff4c8434-9e4f-4d11-9f1e-448cebdb5c6b1650284989788RoadsterMenBlackDrop-ShoulderLonglineT-shirt1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_36",
+      "name": "Printed Round Neck T-Shirt",
+      "brand": "Puma",
+      "category": "tops",
+      "price": 21.67,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22462330/2023/3/22/27a1d087-dc81-46a0-9b86-505f6491b5931679431326265RoyalChallengersBangalore2023MensReplicaJersey1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 5,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_37",
+      "name": "Women White Wide T-shirt",
+      "brand": "H&M",
+      "category": "tops",
+      "price": 8.42,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17186110/2022/2/17/232b7f76-6647-411a-a28e-2811bfbdb28a1645108715599WideT-shirt1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_38",
+      "name": "Rapid Dry Raglan Polo T-shirt",
+      "brand": "HRX by Hrithik Roshan",
+      "category": "tops",
+      "price": 8.6,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2314374/2018/5/2/11525240942451-HRX-by-Hrithik-Roshan-Men-Black-Self-Design-Polo-Collar-T-shirt-1561525240942331-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_39",
+      "name": "Printed Boxy Fit T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 24.99,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10968502/2020/2/18/54c26fb8-d8c6-42b0-a3d6-eea009aaba161582020847616-Roadster-Women-Tshirts-2671582020846188-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_40",
+      "name": "Men Solid Pure Cotton T-shirt",
+      "brand": "Nautica",
+      "category": "tops",
+      "price": 15.65,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13802542/2021/5/24/da580c47-bec2-415f-b6de-b562f9c7237d1621839374174ShirtsTommyHilfigerMenTshirtsTommyHilfigerMenTshirtsWROGNACT1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_41",
+      "name": "Polo Collar Oversized T-shirt",
+      "brand": "Bonkers Corner",
+      "category": "tops",
+      "price": 16.78,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22221528/2023/3/3/562f88cb-55f7-4746-9df6-32d951d355ae1677857165091Tshirts1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_42",
+      "name": "Printed Pure Cotton T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 24.99,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13126922/2021/2/22/6d8b8cbd-fc4d-4500-afb5-a89887ba6a931613993826384-Roadster-Women-Teal-Solid-Round-Neck-T-shirt-544161399382499-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_43",
+      "name": "Men 2022 Fan Jersey",
+      "brand": "Puma",
+      "category": "tops",
+      "price": 10.17,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17535032/2022/3/24/aafe16ee-6483-40ef-8fae-80e114279b591648122118227-Puma-Men-Tshirts-4991648122117871-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_44",
+      "name": "Striped Henley Neck Pure Cotton T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 5.41,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/8023755/2019/2/28/3ccf7a01-9e78-409d-b357-70fffc8bfc251551339061011-Roadster-Men-Tshirts-7841551339059830-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 3,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_45",
+      "name": "Printed Henley T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 24.99,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1371410/2016/8/31/11472626355661-Roadster-Men-Bronze-Printed-V-Neck-T-Shirt-2251472626355441-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_46",
+      "name": "Oversized Pure Cotton T-shirt",
+      "brand": "Kook N Keech",
+      "category": "tops",
+      "price": 7.94,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10926786/2020/6/14/5624caf0-b769-4ffc-91be-a605859434cd1592111383793-Kook-N-Keech-Women-Tshirts-3191592111382247-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 8,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_47",
+      "name": "Ultralyte Men Running T-shirt",
+      "brand": "HRX by Hrithik Roshan",
+      "category": "tops",
+      "price": 5.95,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10106341/2019/9/5/e5bd4bb5-b746-44b1-92fd-1b20906c60031567656798859-HRX-by-Hrithik-Roshan-Men-Tshirts-5601567656797772-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_48",
+      "name": "Printed Round Neck Pure Cotton T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 24.99,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12003902/2020/7/27/d890afe0-cff4-4de8-8b83-3afea9f6fdb11595844856992-Roadster-Men-White-Printed-Round-Neck-T-shirt-28159584485559-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 5,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_49",
+      "name": "Solid Polo Collar Pure Cotton T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 5.41,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11278646/2020/2/10/16fde6a7-71f0-4cc2-9cf2-a0eb3e2b57f01581330316259-Roadster-Men-Tshirts-7971581330313974-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_50",
+      "name": "Polo Collar Cotton Pure Cotton T-shirt",
+      "brand": "HERE&NOW",
+      "category": "tops",
+      "price": 9.2,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/7546902/2019/2/11/be44366c-a232-47ec-a7b4-c4bea24f04e71549886561293-HERENOW-Men-Teal-Solid-Polo-Collar-T-shirt-7371549886559966-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_51",
+      "name": "Women Mid Rise Shorts",
+      "brand": "BRINNS",
+      "category": "bottoms",
+      "price": 6.41,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22959014/2023/4/29/97cde5ef-3d34-4bd0-805d-c9765c99aadc1682763243962BRINNSWomenTealShorts1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 5,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "waist": 30.0,
+            "hip": 40.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "waist": 32.5,
+            "hip": 42.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "waist": 35.0,
+            "hip": 45.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "waist": 37.5,
+            "hip": 47.5,
+            "length": 97.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "waist": 40.0,
+            "hip": 50.0,
+            "length": 100.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_52",
+      "name": "Puffed Sleeves Casual Shirt",
+      "brand": "Wool Trees",
+      "category": "tops",
+      "price": 10.83,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22946300/2023/4/28/0ac64e98-b125-499a-82e1-63e70cc5ed3a1682698366434WoolTreesWomenNavyBlueOpaqueFormalShirt1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_53",
+      "name": "Typography Printed T-shirt",
+      "brand": "Okane",
+      "category": "tops",
+      "price": 6.73,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22928048/2023/4/28/03655502-a5c0-4fe1-8262-b18acee3fc3f1682629488435OkaneWomenRedTypographyPrintedT-shirt1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 3,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_54",
+      "name": "Embroidered Georgette Top",
+      "brand": "WEAVETECH IMPEX",
+      "category": "tops",
+      "price": 10.2,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22862184/2023/4/28/1ce20da8-3abf-4a18-b04f-aec1299f4ff81682663647633-Black-Heavy-Embroderied-Gerogette-Siquins-top-63216826636472-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_55",
+      "name": "Lace Inserted Pure Cotton Top",
+      "brand": "Sztori",
+      "category": "tops",
+      "price": 24.08,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16924904/2023/4/27/6633a8bd-3a27-4c44-96f7-e4d6189928c21682579556806-Sztori-Women-Tops-7761682579556384-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 3,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_56",
+      "name": "Shoulder Straps Fitted Top",
+      "brand": "BRINNS",
+      "category": "tops",
+      "price": 5.94,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22958968/2023/4/29/762a722c-014d-42e4-9bc1-16e77eab7e4d1682773508393BRINNSCream-ColouredCropTop1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_57",
+      "name": "Shirt Collar Checked Dress",
+      "brand": "Styli",
+      "category": "dresses",
+      "price": 19.87,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22954260/2023/4/29/bd64d70e-030a-4ba3-82d4-04c4e3be968d1682741924051StyliNavyBlueCheckedMaxiDress1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 5,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "waist": 32.0,
+            "length": 85.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "waist": 34.5,
+            "length": 87.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "waist": 37.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "waist": 39.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "waist": 42.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_58",
+      "name": "Cotton Knitted Twisted Dress",
+      "brand": "Urban Revivo",
+      "category": "dresses",
+      "price": 27.1,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22688440/2023/4/27/6de6de88-3b31-420e-ba53-5b977d053d761682576783956-Urban-Revivo-Charcoal-A-Line-Dress-3051682576783634-1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "waist": 32.0,
+            "length": 85.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "waist": 34.5,
+            "length": 87.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "waist": 37.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "waist": 39.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "waist": 42.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_59",
+      "name": "Modal Oversized T-shirt",
+      "brand": "Kanvin",
+      "category": "tops",
+      "price": 9.02,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22746652/2023/4/12/b5232ab3-6a74-444e-9c39-7b6c973dfba71681324179272Tshirts1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_60",
+      "name": "Flared Sleeve Maxi Dress",
+      "brand": "Styli",
+      "category": "dresses",
+      "price": 17.46,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22954274/2023/4/29/070ac243-c370-466a-813e-15a7f2ce524a1682741925776StyliMaroonCapeSleeveMaxiDress1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "waist": 32.0,
+            "length": 85.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "waist": 34.5,
+            "length": 87.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "waist": 37.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "waist": 39.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "waist": 42.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_61",
+      "name": "Women Straight Fit Jeans",
+      "brand": "ELLIS",
+      "category": "bottoms",
+      "price": 26.49,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22953654/2023/4/29/071594a4-6fd2-4e1b-ba1d-a2477092caa61682760652867ELLISWomenBlueSmartStraightFitLowDistressJeans1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 8,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "waist": 30.0,
+            "hip": 40.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "waist": 32.5,
+            "hip": 42.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "waist": 35.0,
+            "hip": 45.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "waist": 37.5,
+            "hip": 47.5,
+            "length": 97.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "waist": 40.0,
+            "hip": 50.0,
+            "length": 100.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_62",
+      "name": "V-Neck Shirt Style Top",
+      "brand": "RAASSIO",
+      "category": "tops",
+      "price": 9.6,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22929344/2023/4/28/96ff188e-5001-4d8f-808a-53d183d980791682650075300RAASSIOTurquoiseBlueMandarinCollarCrepeShirtStyleTop1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_63",
+      "name": "Striped Halter Neck Top",
+      "brand": "GUTI",
+      "category": "tops",
+      "price": 10.83,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22961004/2023/4/29/d7ac0d7b-99c5-4fe9-a2cd-70bf9f459f531682778111202Tops1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 5,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_64",
+      "name": "Printed Cotton Co-Ords Set",
+      "brand": "TAG 7",
+      "category": "bottoms",
+      "price": 16.86,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22864272/2023/4/22/b4f944cc-940d-4006-8c89-323c80fc2af31682157111969WHITEMULTIFLORALPRINT3PCKURTASET1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 6,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "waist": 30.0,
+            "hip": 40.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "waist": 32.5,
+            "hip": 42.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "waist": 35.0,
+            "hip": 45.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "waist": 37.5,
+            "hip": 47.5,
+            "length": 97.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "waist": 40.0,
+            "hip": 50.0,
+            "length": 100.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_65",
+      "name": "Striped Pocket Detail T-shirt",
+      "brand": "Mast & Harbour",
+      "category": "tops",
+      "price": 9.63,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/21188150/2023/4/28/1f185dc1-2819-4768-a530-2ed1b5acb8d51682657447537-Mast--Harbour-Women-Tshirts-2401682657447120-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_66",
+      "name": "Women Mid Rise Knitted Tights",
+      "brand": "Sweet Dreams",
+      "category": "tops",
+      "price": 16.01,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22892148/2023/4/25/dbf54e16-333c-4a35-a277-121c3a3d16b71682417297938SweetDreamsWomenSolidAnkleTights1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_67",
+      "name": "Kimono Sleeves Kaftan Top",
+      "brand": "DressBerry",
+      "category": "tops",
+      "price": 6.9,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22954644/2023/4/29/dc6921e2-d0b1-4c0f-bf94-f8aeece11e731682769570155DressBerryBrownKimonoSleeveGeorgetteKaftanTop1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_68",
+      "name": "Floral Print Wrap Crop Top",
+      "brand": "SHEETAL Associates",
+      "category": "tops",
+      "price": 24.08,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22929280/2023/4/28/72458490-6a00-4c53-ae6c-af55e553ad071682629525713SHEETALAssociatesMulticolouredFloralPrintRoll-UpSleevesCrepe1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 3,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_69",
+      "name": "Printed A-Line Midi Dress",
+      "brand": "SASSAFRAS",
+      "category": "dresses",
+      "price": 16.86,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22924276/2023/4/28/eef31884-130a-4ff0-bf6e-0813cf13b09c1682634182020SASSAFRASRedFloralPrintHalterNeckCrepeA-LineDress1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "waist": 32.0,
+            "length": 85.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "waist": 34.5,
+            "length": 87.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "waist": 37.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "waist": 39.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "waist": 42.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_70",
+      "name": "Tropical Print Wrap Midi Dress",
+      "brand": "Urban Revivo",
+      "category": "dresses",
+      "price": 50.59,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22688358/2023/4/27/56be67f5-940f-4fbf-9d7a-0538dc82a9371682592302497-Urban-Revivo-Tropical-Print-Twisted-Front-Wrap-Midi-Dress-10-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 6,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "waist": 32.0,
+            "length": 85.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "waist": 34.5,
+            "length": 87.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "waist": 37.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "waist": 39.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "waist": 42.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_71",
+      "name": "Wrap-Style T-shirt Midi Dress",
+      "brand": "Urban Revivo",
+      "category": "dresses",
+      "price": 27.1,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22688302/2023/4/26/ea31548e-2123-4804-9802-cbc0119bfea41682493387197SkirtsUrbanRevivoWomenSkirtsUrbanRevivoWomenSkirtsUrbanReviv1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 3,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "waist": 32.0,
+            "length": 85.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "waist": 34.5,
+            "length": 87.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "waist": 37.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "waist": 39.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "waist": 42.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_72",
+      "name": "Women Extended Sleeves T-shirt",
+      "brand": "Roadster",
+      "category": "tops",
+      "price": 9.63,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/21971156/2023/5/2/038dbefe-cd60-443a-a32c-f0905c7dd49c1682996602669-The-Roadster-Lifestyle-Co-Women-Extended-Sleeves-T-shirt-505-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_73",
+      "name": "Women Mid Rise Cotton Leggings",
+      "brand": "LYRA",
+      "category": "tops",
+      "price": 5.95,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22941504/2023/4/28/6e7c927e-3ee4-44d8-ad50-cf7ea54914bc1682677619972Trousers1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_74",
+      "name": "Women Pack Of 3 Sports Shorts",
+      "brand": "Jinfo",
+      "category": "bottoms",
+      "price": 6.93,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22945730/2023/4/29/1d5541bb-237f-4c71-8ac5-aa8e3634f9b71682750621163JinfoWomenBeigeYogaSportsShorts1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 5,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "waist": 30.0,
+            "hip": 40.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "waist": 32.5,
+            "hip": 42.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "waist": 35.0,
+            "hip": 45.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "waist": 37.5,
+            "hip": 47.5,
+            "length": 97.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "waist": 40.0,
+            "hip": 50.0,
+            "length": 100.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_75",
+      "name": "Women Straight Fit High-Rise Jeans",
+      "brand": "Urban Revivo",
+      "category": "bottoms",
+      "price": 36.13,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22688658/2023/4/27/87157135-8e6e-4b0b-87ed-1a1de4b02cdd1682590304474-Urban-Revivo-Women-Straight-Fit-High-Rise-Light-Fade-Jeans-1-1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 6,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "waist": 30.0,
+            "hip": 40.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "waist": 32.5,
+            "hip": 42.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "waist": 35.0,
+            "hip": 45.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "waist": 37.5,
+            "hip": 47.5,
+            "length": 97.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "waist": 40.0,
+            "hip": 50.0,
+            "length": 100.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_76",
+      "name": "Fitted Cinched Waist Top",
+      "brand": "NEUDIS",
+      "category": "tops",
+      "price": 14.93,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22933492/2023/4/28/5376c1f4-65e2-4c04-b424-ad62c24d32f81682670563249NEUDISGreenCinchedWaistTop1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 5,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_77",
+      "name": "Women Pack Of 3 Sports Shorts",
+      "brand": "Jinfo",
+      "category": "bottoms",
+      "price": 6.93,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22945760/2023/4/29/741d18f2-bbb3-42ee-ad15-697529b8a15c1682741334653JinfoWomenPinkYogaSportsShorts1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 6,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "waist": 30.0,
+            "hip": 40.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "waist": 32.5,
+            "hip": 42.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "waist": 35.0,
+            "hip": 45.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "waist": 37.5,
+            "hip": 47.5,
+            "length": 97.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "waist": 40.0,
+            "hip": 50.0,
+            "length": 100.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_78",
+      "name": "Women Mid Rise Shorts",
+      "brand": "BRINNS",
+      "category": "bottoms",
+      "price": 6.4,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22959012/2023/4/29/d5b95c79-fd80-4e3f-ae94-6a0cdb59ae691682758143393BRINNSWomenNavyBlueShorts1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 5,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "waist": 30.0,
+            "hip": 40.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "waist": 32.5,
+            "hip": 42.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "waist": 35.0,
+            "hip": 45.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "waist": 37.5,
+            "hip": 47.5,
+            "length": 97.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "waist": 40.0,
+            "hip": 50.0,
+            "length": 100.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_79",
+      "name": "Women Pack Of 3 Yoga Shorts",
+      "brand": "Jinfo",
+      "category": "bottoms",
+      "price": 6.93,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22945734/2023/4/28/8bffe652-7cb9-4f82-b35c-1c2aad5262cb1682691374304JinfoWomenBeigeColourblockedYogaSportsShorts1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 6,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "waist": 30.0,
+            "hip": 40.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "waist": 32.5,
+            "hip": 42.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "waist": 35.0,
+            "hip": 45.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "waist": 37.5,
+            "hip": 47.5,
+            "length": 97.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "waist": 40.0,
+            "hip": 50.0,
+            "length": 100.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_80",
+      "name": "Geometric Printed Top",
+      "brand": "BRINNS",
+      "category": "tops",
+      "price": 9.14,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22959008/2023/4/29/d8ba93f1-fdcd-4cc9-b8f1-3612c0178f1c1682773537114BRINNSMulticolouredGeometricPrintCrepeTop1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 8,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_81",
+      "name": "Printed Basic Jumpsuit",
+      "brand": "Juniper",
+      "category": "tops",
+      "price": 20.95,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22939730/2023/4/28/7aa4546f-cea9-4277-a5cb-68dcf141695b1682687652113JuniperWomensPinkCottonFlexFloralPrintedJumpsuit1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 8,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_82",
+      "name": "Printed Crop Top",
+      "brand": "ADIDAS",
+      "category": "tops",
+      "price": 84.33,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22938730/2023/4/29/b8ac4b54-8160-4be0-91e0-31576293fb631682708370409Tops1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 5,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_83",
+      "name": "Cotton Relaxed Fit T-shirt",
+      "brand": "Styli",
+      "category": "tops",
+      "price": 6.01,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22954262/2023/4/29/bd15390b-550d-409e-92f7-ec34834909401682742000291StyliWomenGreenTypographyPrintedT-shirt1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_84",
+      "name": "Print Denim A-Line Mini Dress",
+      "brand": "SUMAVI-FASHION",
+      "category": "dresses",
+      "price": 24.1,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22966444/2023/5/1/59342f98-a307-407d-8a59-e7fb43df6d521682909427032SUMAVI-FASHIONBluePrintDenimA-LineMiniDress1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "waist": 32.0,
+            "length": 85.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "waist": 34.5,
+            "length": 87.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "waist": 37.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "waist": 39.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "waist": 42.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_85",
+      "name": "Women Mid-Rise Plain Trousers",
+      "brand": "LYRA",
+      "category": "bottoms",
+      "price": 5.95,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22941438/2023/4/28/785ccb25-d880-4521-abf2-75d9cfb435141682677006906LYRAWomenBrownOriginalTrousers1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "waist": 30.0,
+            "hip": 40.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "waist": 32.5,
+            "hip": 42.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "waist": 35.0,
+            "hip": 45.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "waist": 37.5,
+            "hip": 47.5,
+            "length": 97.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "waist": 40.0,
+            "hip": 50.0,
+            "length": 100.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_86",
+      "name": "Sleeveless Fit & Flare Dress",
+      "brand": "BoStreet",
+      "category": "dresses",
+      "price": 20.9,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22920768/2023/4/27/7f504d59-e692-4b40-bccb-12a6fd51d3d61682611758172BoStreetNavyBlueFitFlareDress1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 8,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "waist": 32.0,
+            "length": 85.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "waist": 34.5,
+            "length": 87.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "waist": 37.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "waist": 39.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "waist": 42.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_87",
+      "name": "Women Maternity Track Pants",
+      "brand": "Frempy",
+      "category": "bottoms",
+      "price": 24.08,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22928230/2023/4/28/ba77416f-43d5-4d5e-8959-f338912537281682656204984TrackPants1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 6,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "waist": 30.0,
+            "hip": 40.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "waist": 32.5,
+            "hip": 42.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "waist": 35.0,
+            "hip": 45.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "waist": 37.5,
+            "hip": 47.5,
+            "length": 97.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "waist": 40.0,
+            "hip": 50.0,
+            "length": 100.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_88",
+      "name": "Women High Rise Knitted Tights",
+      "brand": "Sweet Dreams",
+      "category": "tops",
+      "price": 18.3,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22892006/2023/4/25/fffd6ec5-87b8-41a6-81c1-d4d3e85b81401682417321821SweetDreamsWomenSolidAnkleTights1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 4,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_89",
+      "name": "Women Typography Printed Applique T-shirt",
+      "brand": "T-SHIRT TRUCK",
+      "category": "tops",
+      "price": 7.22,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22966962/2023/5/1/4cab120c-d230-45e8-b93f-9e1d4dc0b86e1682909499248T-SHIRTTRUCKWomenBlackTypographyPrintedAppliqueT-shirt1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 3,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_90",
+      "name": "Puff Sleeves Cotton Top",
+      "brand": "Styli",
+      "category": "tops",
+      "price": 12.64,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22954264/2023/4/29/8b8af5ed-7fc7-45cc-b473-1f0843bb2b021682785060053StyliWomenOffWhiteFloralPrintedV-NeckPocketsT-shirt1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_91",
+      "name": "Print Maxi Dress",
+      "brand": "Urban Revivo",
+      "category": "dresses",
+      "price": 43.36,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22687746/2023/4/18/7bae5110-0e6a-48ee-84dc-edb4b57863631681803066028TshirtsUrbanRevivoWomenDressesUrbanRevivoWomenSkirtsUrbanRev1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 3,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "waist": 32.0,
+            "length": 85.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "waist": 34.5,
+            "length": 87.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "waist": 37.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "waist": 39.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "waist": 42.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_92",
+      "name": "Flared Sleeves Crop Top",
+      "brand": "SHEETAL Associates",
+      "category": "tops",
+      "price": 24.08,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22929292/2023/4/28/c059c657-0e3f-406d-867f-8739a94aadb01682629535743SHEETALAssociatesBlackFloralPrintFlaredSleeveCrepeCropTop1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_93",
+      "name": "Shoulder Straps Mini Dress",
+      "brand": "BoStreet",
+      "category": "dresses",
+      "price": 19.27,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22920696/2023/4/27/d4cdde2b-ec01-4eff-b9bf-c35f58b75adc1682607355131BoStreetPinkBodyconMiniDress1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 5,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "waist": 32.0,
+            "length": 85.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "waist": 34.5,
+            "length": 87.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "waist": 37.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "waist": 39.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "waist": 42.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_94",
+      "name": "Halter Neck Top",
+      "brand": "GUTI",
+      "category": "tops",
+      "price": 10.83,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22960936/2023/4/29/d5797163-5037-4c40-ad25-1350170818fd1682779311596Tops1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 5,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_95",
+      "name": "Women Shrug",
+      "brand": "Nimble",
+      "category": "tops",
+      "price": 7.53,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22942018/2023/4/28/fe7ade39-3933-41b6-9aa4-bd1c4f3a70db1682690206784NimbleWomenSkyBlueSolidOpenFrontShrug1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_96",
+      "name": "Sleeveless Fitted Crop Top",
+      "brand": "Disrupt",
+      "category": "tops",
+      "price": 34.5,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22927504/2023/4/28/18bf0f59-7d91-473e-b545-aee2c517c9441682628972735DisruptPinkCropTop1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 2,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_97",
+      "name": "Floral Print Chiffon Fit & Flare Dress",
+      "brand": "MODWEE",
+      "category": "dresses",
+      "price": 7.22,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22904622/2023/5/1/d739ec53-17c9-4795-a380-bed9039c62c11682962213878MODWEEYellowFloralPrintChiffonFitFlareDress1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 5,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "waist": 32.0,
+            "length": 85.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "waist": 34.5,
+            "length": 87.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "waist": 37.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "waist": 39.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "waist": 42.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_98",
+      "name": "Top Solid",
+      "brand": "GUTI",
+      "category": "tops",
+      "price": 10.83,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22960930/2023/4/29/b127f9f6-89d3-4f83-aac0-11b36ab465ee1682779299136GUTIRedCottonCropTop1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 7,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "chest_width": 35.0,
+            "length": 60.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "chest_width": 37.5,
+            "length": 62.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "chest_width": 40.0,
+            "length": 65.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "chest_width": 42.5,
+            "length": 67.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "chest_width": 45.0,
+            "length": 70.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_99",
+      "name": "Women Stretchable Cotton Jeans",
+      "brand": "urSense",
+      "category": "bottoms",
+      "price": 14.45,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22960134/2023/4/29/4ed89aeb-809e-4209-b30d-a8c3548f6a451682762238547urSenseWomenBlueBootcutStretchableJeans1.jpg",
+      "fabric": "Cotton Blend",
+      "stretch_percentage": 5,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "waist": 30.0,
+            "hip": 40.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "waist": 32.5,
+            "hip": 42.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "waist": 35.0,
+            "hip": 45.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "waist": 37.5,
+            "hip": 47.5,
+            "length": 97.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "waist": 40.0,
+            "hip": 50.0,
+            "length": 100.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    },
+    {
+      "id": "myntra_100",
+      "name": "Women Skinny Fit Jeans",
+      "brand": "Vero Moda",
+      "category": "bottoms",
+      "price": 36.13,
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/22914144/2023/4/27/6c560331-433a-4bfb-a766-49b381c103a01682574056850VeroModaWomenBlueSkinnyFitHigh-RiseLowDistressLightFadeStret1.jpg",
+      "fabric": "Polyester",
+      "stretch_percentage": 3,
+      "specifications": {
+        "sizes": {
+          "XS": {
+            "waist": 30.0,
+            "hip": 40.0,
+            "length": 90.0,
+            "fit_type": "regular"
+          },
+          "S": {
+            "waist": 32.5,
+            "hip": 42.5,
+            "length": 92.5,
+            "fit_type": "regular"
+          },
+          "M": {
+            "waist": 35.0,
+            "hip": 45.0,
+            "length": 95.0,
+            "fit_type": "regular"
+          },
+          "L": {
+            "waist": 37.5,
+            "hip": 47.5,
+            "length": 97.5,
+            "fit_type": "regular"
+          },
+          "XL": {
+            "waist": 40.0,
+            "hip": 50.0,
+            "length": 100.0,
+            "fit_type": "regular"
+          }
+        }
+      }
+    }
+  ]
+}
