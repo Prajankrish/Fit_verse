@@ -83,7 +83,7 @@ export const getAllModelPaths = (): string[] => {
   
   Object.values(BODY_MODELS).forEach(model => paths.push(model.path));
   Object.values(CLOTHING_MODELS).forEach(model => paths.push(model.path));
-  Object.values(ACCESSORY_MODELS).forEach(model => paths.push(model.path));
+  Object.values(ACCESSORY_MODELS).forEach((model: any) => paths.push(model.path));
   
   return [...new Set(paths)]; // Remove duplicates
 };

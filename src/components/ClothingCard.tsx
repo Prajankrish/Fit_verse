@@ -23,10 +23,10 @@ interface ClothingCardProps {
 export default function ClothingCard({ item, isInOutfit, isFavorite, onToggleOutfit, onToggleFavorite }: ClothingCardProps) {
   return (
     <div
-      className={`group rounded-xl border overflow-hidden cursor-pointer transition-all hover:shadow-md ${
+      className={`group relative rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:glow-effect ${
         isInOutfit
-          ? "border-primary bg-primary/5 shadow-sm"
-          : "border-border/50 hover:border-primary/20"
+          ? "border-2 border-primary bg-primary/10 shadow-lg"
+          : "border-border/50 border hover:border-primary/50 glass-panel"
       }`}
       onClick={() => onToggleOutfit(item.id)}
       role="button"
@@ -34,10 +34,20 @@ export default function ClothingCard({ item, isInOutfit, isFavorite, onToggleOut
       aria-label={`${isInOutfit ? "Remove" : "Add"} ${item.name}`}
       onKeyDown={(e) => e.key === "Enter" && onToggleOutfit(item.id)}
     >
-      <div className="aspect-square bg-muted/30 flex items-center justify-center text-4xl">
-        {item.image}
+      <div className="aspect-square bg-muted/30 flex items-center justify-center text-4xl relative overflow-hidden">
+        <span className="transition-transform duration-500 group-hover:scale-110">{item.image}</span>
+        
+        {/* Overlay on Hover */}
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+          <Button 
+            className="gradient-coral-teal text-white border-0 font-semibold px-6 shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+            onClick={(e) => { e.stopPropagation(); onToggleOutfit(item.id); }}
+          >
+            {isInOutfit ? "Remove" : "Try On"}
+          </Button>
+        </div>
       </div>
-      <div className="p-3">
+      <div className="p-4 bg-background/80 backdrop-blur-md">
         <h4 className="font-semibold text-sm mb-1 truncate">{item.name}</h4>
         <p className="text-xs text-muted-foreground">{item.brand} · {item.fabric}</p>
         <div className="flex items-center justify-between mt-2">

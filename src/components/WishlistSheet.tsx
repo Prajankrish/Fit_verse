@@ -1,13 +1,36 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Heart, Loader2 } from "lucide-react";
 import { api } from "@/utils/api";
 
-export function WishlistSheet() {
+export function WishlistSheet({ className }: { className?: string }) {
   const [open, setOpen] = useState(false);
   const [items, setItems] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleOpenChange = (newOpen: boolean) => {
+    if (newOpen) {
+      if (!localStorage.getItem("fitverse_user")) {
+        toast("Sign in securely to unlock this feature.", {
+          description: "Join FitVerse to start building your Smart Wardrobe.",
+          action: {
+            label: "Log In",
+            onClick: () => navigate("/login")
+          }
+        });
+        sessionStorage.setItem("fitverse_redirect", "/");
+        return;
+      }
+      setOpen(newOpen);
+    } else {
+      setOpen(newOpen);
+    }
+  };
 
   useEffect(() => {
     if (open) {
@@ -28,10 +51,10 @@ export function WishlistSheet() {
   };
 
   return (
-    <Sheet open={open} onOpenChange={setOpen}>
+    <Sheet open={open} onOpenChange={handleOpenChange}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" aria-label="Wishlist" className="relative">
-          <Heart className="h-5 w-5" />
+        <Button variant="ghost" size="icon" aria-label="Wishlist" className={`relative ${className || ""}`}>
+          <Heart className="h-5 w-5 transition-transform group-hover:scale-110" />
         </Button>
       </SheetTrigger>
       <SheetContent className="w-full sm:max-w-md overflow-y-auto">

@@ -84,36 +84,56 @@ class BodyTypeClassifier:
             proportions_class, height_class, measurements
         )
         
+        # Override with mass heuristics from segmentation 
+        person_ar = measurements.get('person_aspect_ratio', 0)
+        fill_ratio = measurements.get('fill_ratio', 0)
+        pose_quality = measurements.get('pose_quality', 'partial')
+        
+        if pose_quality == 'full_body':
+            if person_ar > 0.40 and fill_ratio > 0.45:
+                body_type = 'plussize'
+                confidence = 0.90
+            elif person_ar > 0.35 and fill_ratio > 0.4:
+                body_type = 'curvy'
+                confidence = 0.85
+            
         return body_type, confidence
-    
+
     def detect_gender(self, measurements: Dict) -> Tuple[str, float]:
         """
         Detect gender from body proportions and silhouette.
-        Uses shoulder-to-hip ratio, chest position, and overall silhouette.
-        
-        Returns:
-            Tuple of (gender, confidence) where gender is 'male', 'female', or 'other'
+        Uses face heuristic if available, else shoulder-to-hip ratio.
         """
         
-        # Extract key indicators
-        # Extreme ratios (> 1.7) usually mean the hips are obscured (e.g. by a dress) rather than actual broad shoulders
+        confidence = measurements.get('confidence', 0.5)
+        if confidence < 0.7:
+            return 'unisex', confidence
+            
         real_shoulder_to_hip = measurements.get('shoulder_to_hip_ratio', 1.0)
+        person_ar = measurements.get('person_aspect_ratio', 0)
+        fill_ratio = measurements.get('fill_ratio', 0)
+        pose_quality = measurements.get('pose_quality', 'partial')
         
-        confidence = 0.5
-        gender = 'other'
+        # Heavy builds obscure skeletal shoulder-to-hip
+        if pose_quality == 'full_body' and (person_ar > 0.35 or fill_ratio > 0.4):
+            if real_shoulder_to_hip > 1.05:
+                return 'male', 0.7
+            elif real_shoulder_to_hip < 0.95:
+                return 'female', 0.7
+            else:
+                return 'unisex', 0.6
         
-        # In a generic fashion context, if it's very likely a dress is worn (extremely narrow hips detected due to pose estimation dropping),
-        # we assume female. Moderately high ratios typically mean broad shoulders (male).
-        
-        if real_shoulder_to_hip > 1.7:
-            gender = 'female'
-            confidence = 0.75  # Exceptionally high ratio usually means dress/skirt obscuring hips
-        elif real_shoulder_to_hip > 1.4:
+        # We don't have facial processing integrated efficiently in the current mediapipe pose,
+        # so relying on shoulder_to_hip_ratio exclusively for now.
+        if real_shoulder_to_hip > 1.2:
             gender = 'male'
-            confidence = 0.70  # Strong V-taper usually indicates male
-        else:
+            confidence = 0.8
+        elif real_shoulder_to_hip < 1.0:
             gender = 'female'
-            confidence = 0.80  # Lower ratio typical of female without dress
+            confidence = 0.8
+        else:
+            gender = 'unisex'
+            confidence = 0.6
 
         return gender, confidence
     

@@ -1,323 +1,251 @@
-// API Client for FitVerse Backend
+// src/utils/api.ts
+import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 export interface BodyAnalysisResponse {
   success: boolean;
-  measurement_id: number;
-  body_analysis: {
-    body_type: string;
-    confidence: number;
-    skin_tone_hsl: string;
-    analysis_confidence: number;
-  };
   measurements: {
     height: number;
-    bust: number;
+    chest: number;
     waist: number;
     hips: number;
-    shoulder_width: number;
-    inseam: number;
   };
+  body_type: string;
+  gender: string;
+  skin_tone: string;
 }
 
-export interface FitPredictionRequest {
-  measurement_id: number;
-  garment_id: string;
-  selected_size: string;
-}
-
-export interface FitPredictionResponse {
-  success: boolean;
-  fit_prediction: {
-    overall_fit_score: number;
-    fit_quality: string;
-    fit_breakdown: {
-      length: number;
-      width: number;
-      proportional: number;
-    };
-    issues: string[];
-    recommendations: {
-      should_buy: boolean;
-      suggestions: string[];
-      confidence?: number;
-      action?: string;
-    };
-    // Phase 1 Enhancement Fields
-    explanation?: string;
-    ai_advice?: string;
-    comfort_metrics?: {
-      comfort_level: number;
-      movement_freedom: number;
-    };
-    avatar_posture?: string;
-  };
-  color_harmony?: {
-    undertone?: string;
-    complementary_palette?: string[];
-    recommended_colors?: string[];
-  };
-  skin_tone_hsl?: string;
+export interface AvatarResponse {
+  scale_x: number;
+  scale_y: number;
+  scale_z: number;
+  body_shape: string;
 }
 
 export interface Garment {
   id: string;
   name: string;
-  brand: string;
   category: string;
   price: number;
-  fabric: string;
-  stretch_percentage: number;
-  image_url: string;
-  target_body_types: string[];
-  fit_notes: string;
-  specifications: {
-    sizes: {
-      [key: string]: {
-        chest_width?: number;
-        length?: number;
-        sleeve_length?: number;
-        waist?: number;
-        hip?: number;
-        inseam?: number;
-        bust?: number;
-      };
+  image?: string;
+  image_url?: string;
+  size?: string;
+  [key: string]: any;
+}
+
+export interface ProductResponse {
+  garments: Garment[];
+}
+
+export interface FitPredictionResponse {
+  fit_prediction: {
+    overall_fit_score: number;
+    fit_quality: string;
+    recommendations: {
+      confidence: number;
+      action: string;
+      suggestions: string[];
     };
+    ai_advice?: string;
+    explanation?: string;
+    fit_breakdown: {
+      length: number;
+      width: number;
+      proportional: number;
+    };
+    width_fit?: string;
+    length_fit?: string;
+    width_score?: number;
+    length_score?: number;
+    comfort_metrics?: {
+      comfort_level: number;
+      movement_freedom: number;
+    };
+    issues: string[];
+  };
+  recommended_size?: string;
+  color_harmony?: {
+    undertone?: string;
+    recommended_colors?: string[];
   };
 }
 
-export interface Measurement {
-  id: number;
-  user_id: number;
-  height: number;
-  bust: number;
-  waist: number;
-  hips: number;
-  shoulder_width: number;
-  inseam: number;
-  body_type: string;
-  skin_tone_hsl: string;
-  analysis_confidence: number;
-  created_at: string;
+export interface StyleRecommendationResponse {
+  recommended_styles: string[];
+}
+
+export interface ColorRecommendationResponse {
+  recommended_colors: string[];
 }
 
 export const api = {
-  /**
-   * Check if backend API is running
-   */
-  async healthCheck() {
-    const response = await fetch(`${API_BASE_URL}/health`);
-    return response.json();
-  },
-
-  /**
-   * Analyze body from photo - main pipeline
-   * Detects pose → estimates height → classifies body type → extracts skin tone
-   * @param file - Image file (JPG, PNG)
-   * @param email - Optional user email
-   * @returns Body analysis with measurements
-   */
-  async analyzeBody(file: File, email?: string): Promise<BodyAnalysisResponse> {
+  analyzeBody: async (file: File): Promise<BodyAnalysisResponse> => {
     const formData = new FormData();
-    formData.append('file', file);
-    if (email) formData.append('email', email);
-
-    const response = await fetch(`${API_BASE_URL}/api/v1/analyze-body`, {
-      method: 'POST',
-      body: formData,
-    });
-
-    if (!response.ok) {
-      const error = await response.json().catch(() => ({}));
-      throw new Error(`Analysis failed: ${error.detail || response.statusText}`);
-    }
-
-    return response.json();
+    formData.append('image', file);
+    const response = await axios.post(`${API_URL}/analyze-body`, formData);
+    return response.data;
   },
 
-  /**
-   * Predict how well a garment will fit
-   * Compares user measurements against garment specs
-   * @param measurementId - ID from body analysis
-   * @param garmentId - Product ID from garment database
-   * @param size - Size (XS, S, M, L, XL)
-   * @returns Fit prediction with score and recommendations
-   */
-  async predictFit(
-    measurementId: number | null,
-    garmentId: string,
-    size: string,
-    measurements?: any
-  ): Promise<FitPredictionResponse> {
-    const response = await fetch(`${API_BASE_URL}/api/v1/predict-fit`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        measurement_id: measurementId,
-        garment_id: garmentId,
-        selected_size: size,
-        measurements: measurements,
-      }),
-    });
-
-    if (!response.ok) {
-      const error = await response.json().catch(() => ({}));
-      throw new Error(`Fit prediction failed: ${error.detail || response.statusText}`);
-    }
-
-    return response.json();
+  generateAvatar: async (measurements: any): Promise<AvatarResponse> => {
+    const response = await axios.post(`${API_URL}/generate-avatar`, { measurements });
+    return response.data;
   },
 
-  /**
-   * Get all available garments
-   * @returns List of all products in database
-   */
-  async getGarments(
-    limit: number = 50, 
-    offset: number = 0, 
-    search: string = '', 
-    category: string = '',
-    gender: string = ''
-  ): Promise<{ garments: Garment[], total: number }> {
-    const params = new URLSearchParams({
-      limit: limit.toString(),
-      offset: offset.toString()
-    });
-    if (search) params.append('search', search);
-    if (category) params.append('category', category);
-    if (gender) params.append('gender', gender);
-
-    const response = await fetch(`${API_BASE_URL}/api/v1/garments?${params.toString()}`);
-    if (!response.ok) {
-      throw new Error('Failed to load garments');
-    }
-    return response.json();
+  getProducts: async (): Promise<ProductResponse> => {
+    const response = await axios.get(`${API_URL}/products`);
+    return response.data;
   },
 
-  /**
-   * Get specific garment details
-   * @param garmentId - Product ID
-   * @returns Garment object with full specifications
-   */
-  async getGarment(garmentId: string): Promise<Garment> {
-    const response = await fetch(`${API_BASE_URL}/api/v1/garments/${garmentId}`);
-    if (!response.ok) {
-      throw new Error('Failed to load garment');
-    }
-    return response.json();
-  },
+  getGarments: async (limit: number = 50, offset: number = 0, search: string = '', category: string = '', gender: string = ''): Promise<{ garments: Garment[], total: number }> => {
+    try {
+      const response = await axios.get(`${API_URL}/products`);
+      let allGarments = response.data.garments || [];
 
-  /**
-   * Get previously saved measurements
-   * @param measurementId - ID from body analysis
-   * @returns Stored measurement record
-   */
-  async getMeasurement(measurementId: number): Promise<Measurement> {
-    const response = await fetch(`${API_BASE_URL}/api/v1/measurement/${measurementId}`);
-    if (!response.ok) {
-      throw new Error('Failed to load measurement');
-    }
-    return response.json();
-  },
+      if (category && category.toLowerCase() !== 'all') {
+        const catFilter = category.toLowerCase();
+        allGarments = allGarments.filter((g: any) => (g.category || '').toLowerCase() === catFilter);
+      }
+      
+      if (gender && gender.toLowerCase() !== 'all') {
+        const genFilter = gender.toLowerCase();
+        allGarments = allGarments.filter((g: any) => (g.ideal_for || g.gender || '').toLowerCase() === genFilter);
+      }
 
-  /**
-   * Get color recommendations based on skin tone
-   * Suggests complementary, analogous, and triadic colors
-   * @param skinToneHsl - Skin tone in HSL format (e.g., "22 45% 65%")
-   * @param limit - Maximum colors to suggest
-   * @returns Color recommendations with harmonies
-   */
-  async getColorRecommendations(skinToneHsl: string, limit = 5) {
-    const response = await fetch(`${API_BASE_URL}/api/v1/color-recommendations`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        skin_tone_hsl: skinToneHsl,
-        limit,
-      }),
-    });
+      if (search) {
+        const query = search.toLowerCase();
+        allGarments = allGarments.filter((g: any) => 
+          (g.name || g.product_details || '').toLowerCase().includes(query) || 
+          (g.brand || '').toLowerCase().includes(query)
+        );
+      }
 
-    if (!response.ok) {
-      throw new Error('Failed to get color recommendations');
-    }
-    return response.json();
-  },
+      // Provide total count before pagination
+      const total = allGarments.length;
 
-  /**
-   * Get style recommendations based on body type
-   * Suggests fashion styles and flattering pieces
-   * @param bodyType - Body type (slim, average, athletic, etc.)
-   * @param occasion - Optional occasion (work, casual, formal, etc.)
-   * @returns Style recommendations and tips
-   */
-  async getStyleRecommendations(bodyType: string, occasion?: string) {
-    const response = await fetch(`${API_BASE_URL}/api/v1/style-recommendations`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        body_type: bodyType,
-        occasion,
-      }),
-    });
+      // Paginate
+      const paginated = allGarments.slice(offset, offset + limit);
 
-    if (!response.ok) {
-      throw new Error('Failed to get style recommendations');
-    }
-    return response.json();
-  },
-
-  /**
-   * Get personalized garment recommendations
-   * Combines fit, color matching, and style compatibility
-   * @param measurementId - ID from body analysis
-   * @param skinToneHsl - Skin tone for color matching
-   * @param bodyType - Body type for style matching
-   * @param limit - Maximum recommendations to return
-   * @returns Scored garment recommendations
-   */
-  async getGarmentRecommendations(
-    measurementId: number,
-    skinToneHsl: string,
-    bodyType: string,
-    limit = 6
-  ) {
-    const response = await fetch(
-      `${API_BASE_URL}/api/v1/garment-recommendations?measurement_id=${measurementId}&skin_tone_hsl=${encodeURIComponent(skinToneHsl)}&body_type=${bodyType}&limit=${limit}`
-    );
-
-    if (!response.ok) {
-      throw new Error('Failed to get garment recommendations');
-    }
-    return response.json();
-  },
-
-    /**
-     * Save a combination to the wishlist
-     */
-    async addToWishlist(wishlistData: any) {
-      const response = await fetch(`${API_BASE_URL}/api/v1/wishlist`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(wishlistData),
+      // Clean images
+      paginated.forEach((item: any) => {
+        item.image = item.image || item.img_url;
+        item.id = item.id || item.product_id;
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to add to wishlist');
-      }
-      return response.json();
-    },
-
-    /**
-     * Get all wishlist items
-     */
-    async getWishlist(userId?: number) {
-      const url = userId ? `${API_BASE_URL}/api/v1/wishlist?user_id=${userId}` : `${API_BASE_URL}/api/v1/wishlist`;
-      const response = await fetch(url);
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch wishlist');
-      }
-      return response.json();
+      return {
+        garments: paginated,
+        total
+      };
+    } catch (e) {
+      console.error(e);
+      return { garments: [], total: 0 };
     }
+  },
+
+  predictFit: async (measurements: any, garment: any, size: string, body_type: string = ''): Promise<FitPredictionResponse> => {
+    // Convert to exactly what the ML backend expects
+    const userPayload = {
+      chest: measurements.chest || 0,
+      waist: measurements.waist || 0,
+      hips: measurements.hips || 0,
+      height: measurements.height || 0,
+      body_type: body_type || measurements.body_type || ''
+    };
+    
+    // Scale fallback specs across sizes so M vs XXL are distinct
+    let baseChest = garment.chest || 100;
+    let baseWaist = garment.waist || 90;
+    let baseLength = garment.length || 72;
+    
+    if (!garment?.specifications?.sizes?.[size]) {
+      const scaleMap: any = { 'XS': 0.85, 'S': 0.92, 'M': 1.0, 'L': 1.08, 'XL': 1.16, 'XXL': 1.25, '3XL': 1.35 };
+      
+      // If sizes object exists but requested size is missing, use an existing size to accurately anchor the base measurements
+      const sizesObj = garment?.specifications?.sizes;
+      if (sizesObj && Object.keys(sizesObj).length > 0) {
+        const refSizeStr = Object.keys(sizesObj).includes('M') ? 'M' : Object.keys(sizesObj)[0];
+        const ref = sizesObj[refSizeStr];
+        const refScale = scaleMap[refSizeStr] || 1.0;
+        
+        baseChest = (ref.chest || ref.bust || (ref.chest_width ? ref.chest_width * 2 : baseChest)) / refScale;
+        baseWaist = (ref.waist || (ref.waist_width ? ref.waist_width * 2 : baseWaist)) / refScale;
+        baseLength = ref.length || baseLength;
+      }
+
+      const scale = scaleMap[size] || 1.0;
+      baseChest = Math.round(baseChest * scale);
+      baseWaist = Math.round(baseWaist * scale);
+      baseLength = Math.round(baseLength * (1 + (scale - 1) * 0.5));
+    }
+
+    const garmentPayload = {
+      size: size,
+      garment_chest: garment?.specifications?.sizes?.[size]?.chest || garment?.specifications?.sizes?.[size]?.bust || (garment?.specifications?.sizes?.[size]?.chest_width ? garment.specifications.sizes[size].chest_width * 2 : null) || baseChest,
+      garment_waist: garment?.specifications?.sizes?.[size]?.waist || (garment?.specifications?.sizes?.[size]?.waist_width ? garment.specifications.sizes[size].waist_width * 2 : null) || baseWaist,
+      garment_length: garment?.specifications?.sizes?.[size]?.length || baseLength
+    };
+
+    const response = await axios.post(`${API_URL}/predict-fit-advanced`, {
+      user: userPayload,
+      garment: garmentPayload
+    });
+    
+    const mlData = response.data;
+    
+    // UI calibration based on hybrid engine outputs
+    // Scores are returned as 0-1, so multiply by 100 for UI
+    const widthScore = Math.round(mlData.width_score * 100);
+    const lengthScore = Math.round(mlData.length_score * 100);
+    const avgScore = Math.round((widthScore + lengthScore) / 2);
+    
+    let action = "MIGHT_WORK";
+    if (mlData.overall_fit === "Excellent" || mlData.overall_fit === "Perfect") action = "BUY_NOW";
+    else if (mlData.overall_fit === "Average") action = "RECOMMENDED";
+    else if (mlData.overall_fit === "Poor") action = "RECONSIDER";
+    
+    return {
+      fit_prediction: {
+        overall_fit_score: avgScore,
+        fit_quality: `${mlData.overall_fit} fit`,
+        recommendations: {
+          confidence: Math.round(mlData.confidence * 100),
+          action: action,
+          suggestions: [mlData.explanation]
+        },
+        ai_advice: mlData.explanation,
+        explanation: mlData.explanation,
+        fit_breakdown: {
+          length: lengthScore,
+          width: widthScore,
+          proportional: avgScore
+        },
+        width_fit: mlData.width_fit,
+        length_fit: mlData.length_fit,
+        width_score: mlData.width_score,
+        length_score: mlData.length_score,
+        comfort_metrics: {
+          comfort_level: avgScore,
+          movement_freedom: Math.round((widthScore + lengthScore) / 2)
+        },
+        issues: mlData.overall_fit === "Poor" ? [mlData.explanation] : []
+      },
+      recommended_size: mlData.recommended_size || size
+    };
+  },
+
+  recommendStyle: async (measurements: any, body_type: string, gender: string): Promise<StyleRecommendationResponse> => {
+    const response = await axios.post(`${API_URL}/recommend-style`, {
+      measurements,
+      body_type,
+      gender
+    });
+    return response.data;
+  },
+
+  recommendColor: async (skin_tone: string): Promise<ColorRecommendationResponse> => {
+    const response = await axios.post(`${API_URL}/recommend-color`, {
+      skin_tone
+    });
+    return response.data;
+  }
 };

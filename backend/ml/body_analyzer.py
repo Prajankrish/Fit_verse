@@ -18,6 +18,7 @@ class BodyAnalyzer:
             static_image_mode=True,
             model_complexity=0,  # CHANGED: was 2 (slowest)
             smooth_landmarks=False,  # Disable smoothing - adds overhead
+            enable_segmentation=True, # Added to track actual body mass
             min_detection_confidence=0.5,
             min_tracking_confidence=0.5
         )
@@ -58,6 +59,19 @@ class BodyAnalyzer:
         # Extract key measurements
         measurements = self._calculate_measurements(landmarks, h, w)
         measurements['confidence'] = self._calculate_detection_confidence(results)
+        
+        if results.segmentation_mask is not None:
+            mask = results.segmentation_mask > 0.5
+            if np.any(mask):
+                rows = np.any(mask, axis=1)
+                cols = np.any(mask, axis=0)
+                rmin, rmax = np.where(rows)[0][0], np.where(rows)[0][-1]
+                cmin, cmax = np.where(cols)[0][0], np.where(cols)[0][-1]
+                p_h = float(rmax - rmin)
+                p_w = float(cmax - cmin)
+                if p_h > 0:
+                    measurements['person_aspect_ratio'] = p_w / p_h
+                    measurements['fill_ratio'] = float(np.sum(mask)) / (p_w * p_h)
         
         return measurements
     
@@ -113,11 +127,10 @@ class BodyAnalyzer:
             'leg_to_torso_ratio': leg_to_torso_ratio,
             'shoulder_to_hip_ratio': shoulder_to_hip_ratio,
             'leftness': landmarks[LEFT_SHOULDER].visibility,
-            'pose_quality': 'full_body' if min(
-                landmarks[LEFT_ANKLE].visibility,
-                landmarks[RIGHT_ANKLE].visibility,
-                landmarks[NOSE].visibility
-            ) > 0.5 else 'partial'
+            'pose_quality': 'full_body' if (
+                max(landmarks[LEFT_ANKLE].visibility, landmarks[RIGHT_ANKLE].visibility) > 0.5 and 
+                landmarks[NOSE].visibility > 0.5
+            ) else 'partial'
         }
     
     def _calculate_detection_confidence(self, results) -> float:

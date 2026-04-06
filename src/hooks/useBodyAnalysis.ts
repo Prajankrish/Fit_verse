@@ -1,21 +1,17 @@
 import { useState } from 'react';
 import { api, BodyAnalysisResponse } from '../utils/api';
 
-/**
- * Hook for analyzing body from photo
- * Handles file upload, loading states, and error handling
- */
 export const useBodyAnalysis = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<BodyAnalysisResponse | null>(null);
 
-  const analyze = async (file: File, email?: string): Promise<BodyAnalysisResponse | null> => {
+  const analyze = async (file: File): Promise<BodyAnalysisResponse | null> => {
     setLoading(true);
     setError(null);
 
     try {
-      const data = await api.analyzeBody(file, email);
+      const data = await api.analyzeBody(file);
       setResult(data);
       return data;
     } catch (err) {
@@ -40,11 +36,9 @@ export const useBodyAnalysis = () => {
     loading,
     error,
     result,
-    // Convenience accessors
-    bodyType: result?.body_analysis.body_type,
-    bodyTypeConfidence: result?.body_analysis.confidence,
-    skinToneHsl: result?.body_analysis.skin_tone_hsl,
+    bodyType: result?.body_type,
+    skinTone: result?.skin_tone,
     measurements: result?.measurements,
-    measurementId: result?.measurement_id,
+    gender: result?.gender
   };
 };

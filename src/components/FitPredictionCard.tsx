@@ -118,49 +118,62 @@ export const FitPredictionCard: React.FC<FitPredictionCardProps> = ({
   const colors = getScoreColor(score);
   const actionBadge = getActionBadge(action);
 
-  // New Fit Slider for Length/Width
-  const FitSlider = ({ label, value, type }: { label: string; value: number; type: 'length' | 'width' }) => {
-    // Math logic: 50% is perceived as perfect fit. 
-    // 0-40 = Short/Tight
-    // 60-100 = Long/Loose
-    const position = Math.max(5, Math.min(95, value));
+  // Simplified Fit Bar Component
+  const FitBar = ({ label, value, type }: { label: string; value: number; type: 'length' | 'width' | 'body' }) => {
+    // Value is 0-100
+    const displayValue = Math.min(100, Math.max(0, value));
     
-    let colorClass = 'bg-emerald-500';
-    if (value < 40 || value > 60) colorClass = 'bg-yellow-500';
-    if (value < 25 || value > 75) colorClass = 'bg-red-500';
-
-    const getLabelLeft = () => type === 'length' ? 'Short' : 'Tight';
-    const getLabelRight = () => type === 'length' ? 'Long' : 'Loose';
+    let status = '';
+    let statusColor = 'text-green-600';
+    let barColor = 'from-green-500 to-emerald-500';
+    
+    if (type === 'length') {
+      if (displayValue < 40) {
+        status = '↑ Too Short';
+        statusColor = 'text-red-600';
+        barColor = 'from-red-500 to-orange-500';
+      } else if (displayValue > 60) {
+        status = '↓ Too Long';
+        statusColor = 'text-yellow-600';
+        barColor = 'from-yellow-500 to-amber-500';
+      } else {
+        status = '✓ Perfect';
+        statusColor = 'text-green-600';
+        barColor = 'from-green-500 to-emerald-500';
+      }
+    } else if (type === 'width') {
+      if (displayValue < 40) {
+        status = '← Too Tight';
+        statusColor = 'text-red-600';
+        barColor = 'from-red-500 to-orange-500';
+      } else if (displayValue > 60) {
+        status = '→ Too Loose';
+        statusColor = 'text-yellow-600';
+        barColor = 'from-yellow-500 to-amber-500';
+      } else {
+        status = '✓ Perfect Fit';
+        statusColor = 'text-green-600';
+        barColor = 'from-green-500 to-emerald-500';
+      }
+    } else {
+      status = '✓ Match';
+      statusColor = 'text-indigo-600';
+      barColor = 'from-indigo-500 to-blue-500';
+    }
 
     return (
-      <div className="mb-5 last:mb-0">
-        <div className="flex justify-between items-end mb-1.5">
-          <div className="flex items-center gap-2">
-            <div className={`p-1.5 rounded-lg ${type === 'length' ? 'bg-blue-50 text-blue-600' : 'bg-purple-50 text-purple-600'}`}>
-              {type === 'length' ? <Ruler className="w-4 h-4" /> : <Gauge className="w-4 h-4" />}
-            </div>
+      <div className="mb-4">
+        <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center gap-2 flex-1">
             <span className="text-sm font-semibold text-gray-700">{label}</span>
           </div>
-          <span className="text-xs font-bold text-gray-500 bg-white border border-gray-200 px-2 py-0.5 rounded shadow-sm">
-            {position < 40 ? `Too ${getLabelLeft()}` : position > 60 ? `Too ${getLabelRight()}` : 'Perfect Match'}
-          </span>
+          <span className={`text-xs font-bold ${statusColor}`}>{status}</span>
         </div>
-        <div className="relative w-full h-3 bg-gray-200 rounded-full mt-3">
-          {/* Neutral center zone */}
-          <div className="absolute left-[40%] right-[40%] top-0 bottom-0 bg-emerald-100 rounded-full" />
-          
-          {/* Tick mark at perfect center */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-4 bg-gray-400 rounded-full z-10" />
-          
-          {/* The thumb */}
-          <div 
-            className={`absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-white shadow-md z-20 transition-all duration-500 ease-out ${colorClass}`}
-            style={{ left: `calc(${position}% - 8px)` }}
+        <div className="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
+          <div
+            className={`bg-gradient-to-r ${barColor} h-2.5 rounded-full transition-all duration-500`}
+            style={{ width: `${displayValue}%` }}
           />
-        </div>
-        <div className="flex justify-between text-[10px] text-gray-400 mt-1 uppercase tracking-wide font-medium px-1">
-          <span>{getLabelLeft()}</span>
-          <span>{getLabelRight()}</span>
         </div>
       </div>
     );
@@ -215,8 +228,13 @@ export const FitPredictionCard: React.FC<FitPredictionCardProps> = ({
           <div className="flex-1">
             <CardTitle className="text-xl font-bold text-gray-900">{garment.name}</CardTitle>
             <p className="text-sm text-gray-600 mt-1 font-medium">
-              {garment.brand} • <span className="font-semibold">Size {size}</span>
+              {garment.brand} • <span className="font-semibold">Selected Size {size}</span>
             </p>
+            {fitData.recommended_size && (
+              <p className="text-md font-bold text-emerald-600 mt-2 flex items-center gap-1">
+                <Sparkles className="w-4 h-4" /> Recommended Size: {fitData.recommended_size}
+              </p>
+            )}
           </div>
 
           {/* Enhanced Score Circle */}
@@ -278,29 +296,26 @@ export const FitPredictionCard: React.FC<FitPredictionCardProps> = ({
           </div>
         )}
 
-        {/* Fit Breakdown Section - Premium Design */}
+        {/* Fit Breakdown Section - Simplified */}
         <div className="bg-white/40 backdrop-blur p-4 rounded-xl border border-gray-200/50">
           <h3 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wide flex items-center gap-2">
-            <Gauge className="w-4 h-4" /> Fit Breakdown
+            <CheckCircle className="w-4 h-4" /> Fit Details
           </h3>
           <div className="space-y-4">
-            <FitSlider
-              label="Length Fit"
+            <FitBar
+              label="Length"
               value={fit_prediction.fit_breakdown.length}
               type="length"
             />
-            <div className="border-t border-gray-100/50" />
-            <FitSlider
-              label="Width Fit"
+            <FitBar
+              label="Width/Chest"
               value={fit_prediction.fit_breakdown.width}
               type="width"
             />
-            <div className="border-t border-gray-100/50" />
-            <MetricBar
-              icon={<Users className="w-4 h-4 text-pink-600" />}
-              label="Body Type Match"
+            <FitBar
+              label="Body Type Compatibility"
               value={fit_prediction.fit_breakdown.proportional}
-              color="bg-pink-50"
+              type="body"
             />
           </div>
         </div>

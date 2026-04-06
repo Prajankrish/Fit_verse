@@ -37,7 +37,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "male",
+      "gender": "male"
     },
     {
       "id": "myntra_2",
@@ -76,7 +78,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "male",
+      "gender": "male"
     },
     {
       "id": "myntra_3",
@@ -115,7 +119,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_4",
@@ -154,7 +160,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_5",
@@ -193,7 +201,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_6",
@@ -232,7 +242,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "male",
+      "gender": "male"
     },
     {
       "id": "myntra_7",
@@ -271,7 +283,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_8",
@@ -310,7 +324,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "male",
+      "gender": "male"
     },
     {
       "id": "myntra_9",
@@ -349,7 +365,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_10",
@@ -388,7 +406,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_11",
@@ -427,7 +447,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_12",
@@ -466,7 +488,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_13",
@@ -505,7 +529,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_14",
@@ -544,7 +570,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "male",
+      "gender": "male"
     },
     {
       "id": "myntra_15",
@@ -583,7 +611,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_16",
@@ -622,7 +652,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "male",
+      "gender": "male"
     },
     {
       "id": "myntra_17",
@@ -661,7 +693,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "male",
+      "gender": "male"
     },
     {
       "id": "myntra_18",
@@ -700,7 +734,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_19",
@@ -739,7 +775,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_20",
@@ -778,7 +816,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_21",
@@ -817,7 +857,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_22",
@@ -856,7 +898,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_23",
@@ -895,7 +939,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_24",
@@ -934,7 +980,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_25",
@@ -973,7 +1021,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_26",
@@ -1012,7 +1062,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "male",
+      "gender": "male"
     },
     {
       "id": "myntra_27",
@@ -1051,7 +1103,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_28",
@@ -1090,7 +1144,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "male",
+      "gender": "male"
     },
     {
       "id": "myntra_29",
@@ -1129,7 +1185,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_30",
@@ -1168,7 +1226,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_31",
@@ -1207,7 +1267,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_32",
@@ -1246,7 +1308,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_33",
@@ -1285,7 +1349,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "male",
+      "gender": "male"
     },
     {
       "id": "myntra_34",
@@ -1324,7 +1390,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "male",
+      "gender": "male"
     },
     {
       "id": "myntra_35",
@@ -1363,7 +1431,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_36",
@@ -1402,7 +1472,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_37",
@@ -1441,7 +1513,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_38",
@@ -1480,7 +1554,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_39",
@@ -1519,7 +1595,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_40",
@@ -1558,7 +1636,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "male",
+      "gender": "male"
     },
     {
       "id": "myntra_41",
@@ -1597,7 +1677,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_42",
@@ -1636,7 +1718,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_43",
@@ -1675,7 +1759,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "male",
+      "gender": "male"
     },
     {
       "id": "myntra_44",
@@ -1714,7 +1800,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_45",
@@ -1753,7 +1841,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_46",
@@ -1792,7 +1882,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_47",
@@ -1831,7 +1923,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "male",
+      "gender": "male"
     },
     {
       "id": "myntra_48",
@@ -1870,7 +1964,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_49",
@@ -1909,7 +2005,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_50",
@@ -1948,7 +2046,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_51",
@@ -1992,7 +2092,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_52",
@@ -2031,7 +2133,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_53",
@@ -2070,7 +2174,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_54",
@@ -2109,7 +2215,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_55",
@@ -2148,7 +2256,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_56",
@@ -2187,7 +2297,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_57",
@@ -2231,7 +2343,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_58",
@@ -2275,7 +2389,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_59",
@@ -2314,7 +2430,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_60",
@@ -2358,7 +2476,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_61",
@@ -2402,7 +2522,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_62",
@@ -2441,7 +2563,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_63",
@@ -2480,7 +2604,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_64",
@@ -2524,7 +2650,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_65",
@@ -2563,7 +2691,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_66",
@@ -2602,7 +2732,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_67",
@@ -2641,7 +2773,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_68",
@@ -2680,7 +2814,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_69",
@@ -2724,7 +2860,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_70",
@@ -2768,7 +2906,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_71",
@@ -2812,7 +2952,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_72",
@@ -2851,7 +2993,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_73",
@@ -2890,7 +3034,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_74",
@@ -2934,7 +3080,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_75",
@@ -2978,7 +3126,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_76",
@@ -3017,7 +3167,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_77",
@@ -3061,7 +3213,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_78",
@@ -3105,7 +3259,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_79",
@@ -3149,7 +3305,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_80",
@@ -3188,7 +3346,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_81",
@@ -3227,7 +3387,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_82",
@@ -3266,7 +3428,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_83",
@@ -3305,7 +3469,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_84",
@@ -3349,7 +3515,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_85",
@@ -3393,7 +3561,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_86",
@@ -3437,7 +3607,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_87",
@@ -3481,7 +3653,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_88",
@@ -3520,7 +3694,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_89",
@@ -3559,7 +3735,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_90",
@@ -3598,7 +3776,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_91",
@@ -3642,7 +3822,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_92",
@@ -3681,7 +3863,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_93",
@@ -3725,7 +3909,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_94",
@@ -3764,7 +3950,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_95",
@@ -3803,7 +3991,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_96",
@@ -3842,7 +4032,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_97",
@@ -3886,7 +4078,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_98",
@@ -3925,7 +4119,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "unisex",
+      "gender": "unisex"
     },
     {
       "id": "myntra_99",
@@ -3969,7 +4165,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     },
     {
       "id": "myntra_100",
@@ -4013,7 +4211,9 @@
             "fit_type": "regular"
           }
         }
-      }
+      },
+      "ideal_for": "female",
+      "gender": "female"
     }
   ]
 }

@@ -1,25 +1,21 @@
-from typing import Dict, List, Tuple
-import json
+from typing import Dict, List
 import os
-import google.generativeai as genai
+import requests
+
+from fit_engine_rule_based import predict_fit as predict_fit_rule_based
 
 class FitEngine:
     """
     Predicts garment fit based on user measurements and garment specifications.
-    Generates fit scores and recommendations, potentially using Gemini AI.
+    Generates fit scores and recommendations, potentially using OpenRouter AI.
     """
     
     def __init__(self):
-        # Initialize Gemini API if key is available
-        self.gemini_key = os.getenv("GEMINI_API_KEY")
-        self.use_gemini = False
-        if self.gemini_key:
-            try:
-                genai.configure(api_key=self.gemini_key)
-                self.model = genai.GenerativeModel('gemini-pro')
-                self.use_gemini = True
-            except Exception as e:
-                print(f"Failed to initialize Gemini: {e}")
+        # Initialize OpenRouter API if key is available
+        self.openrouter_key = os.getenv("OPENROUTER_API_KEY")
+        self.use_llm = False
+        if self.openrouter_key:
+            self.use_llm = True
                 
     def predict_fit(self, user_measurements: Dict, garment: Dict, user_size: str) -> Dict:
         """
@@ -39,7 +35,7 @@ class FitEngine:
             return {'error': 'Size not available'}
         
         garment_size = garment['specifications']['sizes'][user_size]
-        stretch_percentage = garment.get('stretch_percentage', 5)
+        stretch_percentage = float(garment.get('stretch_percentage', 5))
         
         # Gender mismatch penalty
         user_gender = user_measurements.get('gender', 'other')
@@ -54,13 +50,48 @@ class FitEngine:
                 # Severe penalty for wearing unmatching gender cuts (unless intended)
                 gender_penalty = 40
         
-        # Calculate fit metrics
+        # Compute chest/waist garment measurements for margin-based engine.
+        user_chest = float(user_measurements.get('chest', user_measurements.get('bust', 90)))
+        user_waist = float(user_measurements.get('waist', 80))
+
+        garment_chest = self._extract_circumference_measurement(
+            garment_size,
+            ['chest', 'bust', 'chest_width', 'width'],
+            fallback=100.0,
+        )
+        garment_waist = self._extract_circumference_measurement(
+            garment_size,
+            ['waist', 'waist_width'],
+            fallback=88.0,
+        )
+
+        # Optional oversized compensation for missing specs.
+        garment_name = str(garment.get('name', '')).lower()
+        if 'oversized' in garment_name or 'relaxed' in garment_name:
+            garment_chest += 8.0
+            garment_waist += 6.0
+
+        stretch_factor = float(garment.get('stretch_factor', 0.0))
+        if stretch_factor <= 0:
+            stretch_factor = max(0.0, min(1.0, stretch_percentage / 100.0))
+
+        fit_core = predict_fit_rule_based(
+            user_measurements={'chest': user_chest, 'waist': user_waist},
+            product_measurements={
+                'chest': garment_chest,
+                'waist': garment_waist,
+                'stretch_factor': stretch_factor,
+            },
+        )
+
+        overall_score = int(fit_core['score'])
+        chest_margin = float(fit_core['details']['chest_margin'])
+        waist_margin = float(fit_core['details']['waist_margin'])
+
+        # Keep existing normalized fit_breakdown shape for UI consumers.
+        width_fit = self._margin_to_centered_scale(chest_margin)
         length_fit = self._check_length_fit(user_measurements, garment_size, garment['category'])
-        width_fit = self._check_width_fit(user_measurements, garment_size, garment['category'], stretch_percentage)
         proportional_fit = self._check_proportional_fit(user_measurements, garment, user_size)
-        
-        # Overall fit score (0-100)
-        overall_score = self._calculate_overall_score(length_fit, width_fit, proportional_fit)
         
         # Apply gender mismatch penalty
         if gender_penalty > 0:
@@ -68,8 +99,26 @@ class FitEngine:
             # Cap maximum score at 45 (POOR fit range)
             overall_score = min(45, overall_score)
         
-        # Identify issues
-        issues = self._identify_issues(length_fit, width_fit, proportional_fit, garment)
+        # Identify issues using margin-first logic.
+        issues = []
+        if chest_margin < -4:
+            issues.append("❌ Too tight across chest - size up recommended")
+        elif chest_margin < 0:
+            issues.append("⚠️ Slightly tight in chest area")
+        elif chest_margin >= 8:
+            issues.append("⚠️ Very loose across chest - consider size down")
+
+        if waist_margin < -4:
+            issues.append("❌ Too tight around waist")
+        elif waist_margin < 0:
+            issues.append("⚠️ Slightly tight around waist")
+        elif waist_margin >= 8:
+            issues.append("💡 Loose at waist for a relaxed look")
+
+        # Add auxiliary checks from existing length/proportional logic.
+        issues.extend(self._identify_issues(length_fit, width_fit, proportional_fit, garment))
+        # De-duplicate while preserving order.
+        issues = list(dict.fromkeys(issues))
         
         # Add gender mismatch to issues
         if is_gender_mismatch:
@@ -77,22 +126,29 @@ class FitEngine:
         
         # Generate recommendations
         recommendations = self._generate_recommendations(overall_score, issues, garment)
+        recommendations['suggestions'].insert(0, fit_core['recommendation'])
+        recommendations['confidence'] = int(round(fit_core['confidence'] * 100))
         
-        # Optionally enhance recommendations using Gemini AI
+        # Optionally enhance recommendations using LLM advice
         ai_advice = None
-        if self.use_gemini:
+        if self.use_llm:
             try:
-                ai_advice = self._get_gemini_advice(
+                ai_advice = self._get_llm_advice(
                     user_measurements, garment, user_size, overall_score, issues, is_gender_mismatch
                 )
             except Exception as e:
-                print(f"Gemini generation failed: {e}")
+                print(f"LLM generation failed: {e}")
         
         return {
             'garment_id': garment['id'],
             'garment_name': garment['name'],
             'selected_size': user_size,
             'overall_fit_score': overall_score,
+            'fit': fit_core['fit'],
+            'score': overall_score,
+            'confidence': fit_core['confidence'],
+            'details': fit_core['details'],
+            'recommendation': fit_core['recommendation'],
             'fit_breakdown': {
                 'length': length_fit * 100,
                 'width': width_fit * 100,
@@ -102,11 +158,34 @@ class FitEngine:
             'issues': issues,
             'recommendations': recommendations,
             'ai_advice': ai_advice,
-            'stretch_accommodation': garment['stretch_percentage']
+            'stretch_accommodation': garment.get('stretch_percentage', 0)
         }
+
+    def _extract_circumference_measurement(self, size_spec: Dict, keys: List[str], fallback: float) -> float:
+        """Extract a circumference value in cm from likely garment spec keys."""
+        for key in keys:
+            value = size_spec.get(key)
+            if value is None:
+                continue
+            try:
+                numeric = float(value)
+            except (TypeError, ValueError):
+                continue
+            if numeric <= 0:
+                continue
+            # Heuristic: values below these thresholds are likely flat widths.
+            if key in {'chest_width', 'width', 'waist_width'} or numeric < 70:
+                return numeric * 2.0
+            return numeric
+        return fallback
+
+    def _margin_to_centered_scale(self, margin: float) -> float:
+        """Convert cm margin to 0..1 centered scale where 0.5 means perfect fit."""
+        max_abs = 20.0
+        return max(0.0, min(1.0, 0.5 + (margin / (2 * max_abs))))
     
-    def _get_gemini_advice(self, user, garment, size, score, issues, is_gender_mismatch) -> str:
-        """Call Gemini to get a customized styling advice paragraph."""
+    def _get_llm_advice(self, user, garment, size, score, issues, is_gender_mismatch) -> str:
+        """Call OpenRouter LLM to get a customized styling advice paragraph."""
         prompt = f"""
         Act as a professional fashion stylist and virtual fitting expert.
         The user has a '{user.get('body_type', 'average')}' body type and identifies as {user.get('gender', 'unknown')}.
@@ -123,8 +202,34 @@ class FitEngine:
         Keep the tone polite, modern, and helpful. Do not use markdown bullet points.
         """
         
-        response = self.model.generate_content(prompt)
-        return response.text.replace('\n', ' ').strip()
+        headers = {
+            "Authorization": f"Bearer {self.openrouter_key}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": "http://localhost:5173",
+        }
+        
+        payload = {
+            "model": "google/gemini-2.5-flash",
+            "messages": [
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ]
+        }
+        
+        response = requests.post(
+            "https://openrouter.ai/api/v1/chat/completions",
+            headers=headers,
+            json=payload,
+            timeout=10
+        )
+        
+        if response.status_code == 200:
+            result = response.json()
+            return result['choices'][0]['message']['content'].strip().replace('\n', ' ')
+        else:
+            raise Exception(f"OpenRouter API error: {response.text}")
         
     def _check_length_fit(self, measurements: Dict, garment_size: Dict, category: str) -> float:
         """
@@ -186,24 +291,28 @@ class FitEngine:
         """
         
         # Width key varies by category
-        if category in ['tops', 'outerwear']:
+        if category in ['tops', 'outerwear', 'tshirts', 'shirts']:
             user_width_key = 'bust'
-            garment_width_key = 'chest_width'
-            tolerance = 3  # cm
+            garment_width_key = 'chest' if 'chest' in garment_size else 'width'
+            tolerance = 4  # cm
             ease_allowance = 4.0  # target ease for perfect fit
         elif category == 'bottoms':
             user_width_key = 'waist'
             garment_width_key = 'waist'
-            tolerance = 2.5  # cm - tighter tolerance for bottoms
+            tolerance = 3.5  # cm
             ease_allowance = 1.5  # tighter fit expected
         elif category == 'dresses':
             user_width_key = 'bust'
-            garment_width_key = 'bust'
-            tolerance = 3  # cm
+            garment_width_key = 'chest' if 'chest' in garment_size else 'width'
+            tolerance = 4  # cm
             ease_allowance = 3.0  # standard ease
         else:
-            return 0.5
-        
+            # Fallback
+            user_width_key = 'bust'
+            garment_width_key = 'chest' if 'chest' in garment_size else 'width'
+            tolerance = 4
+            ease_allowance = 3.0
+            
         user_width = measurements.get(user_width_key, 0)
         garment_width_flat = garment_size.get(garment_width_key, 0)
         
@@ -214,37 +323,35 @@ class FitEngine:
         if user_width == 0 or garment_width == 0:
             return 0.5
         
-        # Calculate diff minus standard ease (positive = still looser than perfect, negative = too tight)
+        # Calculate difference: garment_width - (user_width + ease_allowance)
+        # positive = garment is looser than perfect
+        # negative = garment is tighter than perfect
         diff = garment_width - (user_width + ease_allowance)
         
-        # Adjust tolerance based on stretch percentage
-        # Higher stretch = more tolerance for being too tight
-        stretch_adjusted_tolerance = tolerance * (1 + stretch_percent / 100)
+        # Stretch adds tolerance mostly to the "too tight" side 
+        # (if a garment stretches, negative diffs are less punishing)
+        tight_tolerance = tolerance + (garment_width * (stretch_percent / 100.0))
+        loose_tolerance = tolerance * 1.5 # Looser garments are generally more acceptable than tight ones
         
-        # Scoring with asymmetric penalties (being too tight is worse than too loose)
-        if abs(diff) <= tolerance / 2:
-            return 0.5  # Perfect fit
-        elif diff > 0 and diff <= stretch_adjusted_tolerance:
-            # Too loose (but acceptable with stretch or styling)
-            return 0.5 + (diff / stretch_adjusted_tolerance) * 0.25
-        elif diff < 0 and abs(diff) <= tolerance:
-            # Too tight but within acceptable range
-            penalty = abs(diff) / tolerance * 0.25
-            return 0.5 - penalty
-        elif diff < 0 and abs(diff) <= stretch_adjusted_tolerance:
-            # Too tight but stretch can help
-            penalty = abs(diff) / stretch_adjusted_tolerance * 0.30
-            return max(0.2, 0.5 - penalty)
-        else:
-            # Significantly mismatched
-            if diff > 0:
-                # Too loose - not ideal but visible
-                excess = diff - stretch_adjusted_tolerance
-                return min(0.85, 0.7 + (excess / 15) * 0.1)
+        if diff >= 0:
+            # Too loose
+            if diff <= loose_tolerance:
+                # Within acceptable looseness (0.5 to 0.75)
+                return 0.5 + (diff / loose_tolerance) * 0.25
             else:
-                # Too tight - problematic
-                excess = abs(diff) - stretch_adjusted_tolerance
-                return max(0.1, 0.2 - (excess / 10) * 0.05)
+                # Far too loose (0.75 to 1.0)
+                excess = diff - loose_tolerance
+                return min(1.0, 0.75 + (excess / 20) * 0.25)
+        else:
+            # Too tight (diff is negative)
+            abs_diff = abs(diff)
+            if abs_diff <= tight_tolerance:
+                # Within acceptable tightness due to stretch (0.5 down to 0.25)
+                return 0.5 - (abs_diff / tight_tolerance) * 0.25
+            else:
+                # Far too tight (0.25 down to 0.0)
+                excess = abs_diff - tight_tolerance
+                return max(0.0, 0.25 - (excess / 15) * 0.25)
     
     def _check_proportional_fit(self, measurements: Dict, garment: Dict, user_size: str) -> float:
         """
@@ -301,21 +408,45 @@ class FitEngine:
         
         # Evaluate each available size
         for size, garment_size in garment['specifications']['sizes'].items():
-            length_fit = self._check_length_fit(user_measurements, garment_size, garment['category'])
-            width_fit = self._check_width_fit(
-                user_measurements, 
-                garment_size, 
-                garment['category'],
-                garment.get('stretch_percentage', 5)
+            user_chest = float(user_measurements.get('chest', user_measurements.get('bust', 90)))
+            user_waist = float(user_measurements.get('waist', 80))
+
+            garment_chest = self._extract_circumference_measurement(
+                garment_size,
+                ['chest', 'bust', 'chest_width', 'width'],
+                fallback=100.0,
             )
+            garment_waist = self._extract_circumference_measurement(
+                garment_size,
+                ['waist', 'waist_width'],
+                fallback=88.0,
+            )
+
+            stretch_factor = float(garment.get('stretch_factor', 0.0))
+            if stretch_factor <= 0:
+                stretch_factor = max(0.0, min(1.0, float(garment.get('stretch_percentage', 5)) / 100.0))
+
+            core = predict_fit_rule_based(
+                user_measurements={'chest': user_chest, 'waist': user_waist},
+                product_measurements={
+                    'chest': garment_chest,
+                    'waist': garment_waist,
+                    'stretch_factor': stretch_factor,
+                },
+            )
+
+            length_fit = self._check_length_fit(user_measurements, garment_size, garment['category'])
+            width_fit = self._margin_to_centered_scale(float(core['details']['chest_margin']))
             proportional_fit = self._check_proportional_fit(user_measurements, garment, size)
-            
-            score = self._calculate_overall_score(length_fit, width_fit, proportional_fit)
+
+            score = int(core['score'])
             size_scores[size] = {
                 'score': score,
                 'length_fit': length_fit,
                 'width_fit': width_fit,
-                'proportional_fit': proportional_fit
+                'proportional_fit': proportional_fit,
+                'fit': core['fit'],
+                'recommendation': core['recommendation'],
             }
         
         # Sort sizes by score descending
@@ -376,22 +507,35 @@ class FitEngine:
         Uses non-linear scaling to be more discriminating at high scores.
         """
         
-        # Weighted average: width (45%), length (35%), proportional (20%)
-        raw_score = (width * 0.45 + length * 0.35 + proportional * 0.20)
+        # Convert distances from ideal (0.5) to a proximity score (0-1)
+        # 0.5 is perfect (difference = 0 -> score = 1)
+        # 0.0 or 1.0 is terrible (difference = 0.5 -> score = 0)
+        # We use a softer drop-off (power of 1.5) so that slightly loose/tight isn't heavily punished
+        length_accuracy = max(0.0, 1.0 - (abs(0.5 - length) * 2) ** 1.5)
+        width_accuracy = max(0.0, 1.0 - (abs(0.5 - width) * 2) ** 1.5)
+        prop_accuracy = max(0.0, min(1.0, proportional))
         
-        # Apply sigmoid-like scaling to be more discriminating at high confidence levels
-        # This makes excellent fits (0.8+) harder to reach
-        if raw_score >= 0.75:
-            # Map 0.75-1.0 to 75-95 (not quite 100 even at perfect fit)
-            adjusted = 75 + (raw_score - 0.75) / 0.25 * 20
-        elif raw_score >= 0.5:
-            # Map 0.5-0.75 to 50-75
-            adjusted = 50 + (raw_score - 0.5) / 0.25 * 25
-        else:
-            # Map 0-0.5 to 0-50
-            adjusted = raw_score / 0.5 * 50
+        # Heavy penalty ONLY if garments are exceptionally tight or overwhelmingly loose
+        penalty = 0.0
+        if width_accuracy < 0.2:
+            penalty += 0.30
+        elif width_accuracy < 0.4:
+            penalty += 0.15
+            
+        if length_accuracy < 0.2:
+            penalty += 0.15
+            
+        # Weighted average: width (50%), length (30%), proportional (20%)
+        raw_score = (width_accuracy * 0.50 + length_accuracy * 0.30 + prop_accuracy * 0.20) - penalty
         
-        return min(100, max(0, int(adjusted)))
+        # Ensure bounds after penalty
+        raw_score = max(0.0, min(1.0, raw_score))
+        
+        # Give a slight boost curve to good fits so it reaches the 90s effortlessly
+        boosted_score = raw_score ** 0.8
+        
+        final_score = int(boosted_score * 100)
+        return final_score
     
     def _score_to_quality(self, score: int) -> str:
         """Convert score to quality descriptor."""

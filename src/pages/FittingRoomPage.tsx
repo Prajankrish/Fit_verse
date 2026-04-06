@@ -1,14 +1,15 @@
-import { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogClose } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Share2, ShoppingBag, Sparkles, Upload, ChevronDown, ChevronUp, Maximize2, ArrowLeft } from "lucide-react";
+import { Heart, Share2, ShoppingBag, Sparkles, Upload, ChevronDown, ChevronUp, Maximize2, ArrowLeft, AlertCircle } from "lucide-react";
 import AvatarViewer from "@/components/AvatarViewer";
 import { AIAvatarGenerator } from "@/components/AIAvatarGenerator";
 import { ImageUploadComponent } from "@/components/ImageUploadComponent";
 import { GarmentGrid } from "@/components/GarmentGrid";
+import { FitContext } from "@/components/FitPredictionSystem";
 import { FitPredictionCard } from "@/components/FitPredictionCard";
 import { FitAnalysisPanel } from "@/components/FitAnalysisPanel";
 import { StyleRecommendationCard } from "@/components/StyleRecommendationCard";
@@ -60,8 +61,8 @@ export default function FittingRoomPage() {
     if (analysisData?.body_analysis) {
       setRecsLoading(true);
       Promise.all([
-        api.getStyleRecommendations(analysisData.body_analysis.body_type),
-        api.getColorRecommendations(analysisData.body_analysis.skin_tone_hsl)
+        api.recommendStyle(analysisData.measurements, analysisData.body_analysis.body_type, analysisData.body_analysis.gender),
+        api.recommendColor(analysisData.body_analysis.skin_tone_hsl)
       ])
         .then(([style, color]) => {
           setStyleRecs(style);
@@ -133,9 +134,28 @@ export default function FittingRoomPage() {
     setIsAnalyzing(false);
   };
 
+  const fitCtx = React.useContext(FitContext);
+
   const handleGarmentSelect = (garment: Garment, size: string) => {
     setSelectedGarment(garment);
     setSelectedSize(size);
+    if (fitCtx) {
+      fitCtx.setBodyData({
+         chest: combinedMeasurements.bust || combinedMeasurements.chest || 90,
+         waist: combinedMeasurements.waist || 70,
+         hips: combinedMeasurements.hips || 95,
+         height: combinedMeasurements.height || 170
+      });
+      fitCtx.setSelectedProduct({
+         id: garment.id,
+         name: garment.title || garment.name || "Garment",
+         image: garment.image_url || garment.image || garment.images?.[0] || "",
+         garment_chest: garment.specifications?.sizes?.[size]?.chest || garment.specifications?.measurements?.chest || 100,
+         garment_waist: garment.specifications?.sizes?.[size]?.waist || garment.specifications?.measurements?.waist || 80,
+         garment_length: garment.specifications?.sizes?.[size]?.length || garment.specifications?.measurements?.length || 60
+      });
+      fitCtx.setIsModalOpen(true);
+    }
   };
 
   const handleMeasurementChange = (key: string, value: number) => {
@@ -152,14 +172,14 @@ export default function FittingRoomPage() {
       const wishlistData = {
         garment_id: selectedGarment.id,
         garment_name: selectedGarment.title || selectedGarment.name,
-        garment_image: selectedGarment.image_url || selectedGarment.images?.[0] || "",
+        garment_image: selectedGarment.image_url || selectedGarment.image || selectedGarment.images?.[0] || "",
         size: selectedSize,
-        fit_score: fitResults?.overall_fit_score || null,
+        fit_score: fitResults?.fit_prediction?.overall_fit_score || null,
         style_combination: styleRecs?.profile || null,
         recommendations: colorRecs || null
       };
       
-      await api.addToWishlist(wishlistData);
+      localStorage.setItem(`wishlist_${selectedGarment.id}`, JSON.stringify(wishlistData));
       toast.success("Added to your wishlist!");
     } catch (error) {
       toast.error("Failed to add to wishlist");
@@ -175,6 +195,24 @@ export default function FittingRoomPage() {
             Virtual <span className="text-gradient">Fitting Room</span>
           </h1>
           <p className="text-muted-foreground">Build your profile, view in 3D, and find the perfect fit.</p>
+          
+          {/* Progress Indicator */}
+          <div className="flex items-center gap-2 mt-4 text-sm">
+            <div className={`flex items-center justify-center w-6 h-6 rounded-full ${analysisData ? 'bg-green-500 text-white' : 'bg-muted text-muted-foreground'}`}>
+              {analysisData ? '✓' : '1'}
+            </div>
+            <span className={analysisData ? 'font-semibold' : 'text-muted-foreground'}>Profile</span>
+            <div className="h-1 flex-1 bg-muted rounded"></div>
+            <div className={`flex items-center justify-center w-6 h-6 rounded-full ${selectedGarment ? 'bg-green-500 text-white' : 'bg-muted text-muted-foreground'}`}>
+              {selectedGarment ? '✓' : '2'}
+            </div>
+            <span className={selectedGarment ? 'font-semibold' : 'text-muted-foreground'}>Garment</span>
+            <div className="h-1 flex-1 bg-muted rounded"></div>
+            <div className={`flex items-center justify-center w-6 h-6 rounded-full ${fitResults ? 'bg-green-500 text-white' : 'bg-muted text-muted-foreground'}`}>
+              {fitResults ? '✓' : '3'}
+            </div>
+            <span className={fitResults ? 'font-semibold' : 'text-muted-foreground'}>Analysis</span>
+          </div>
         </header>
 
         {/* 3-COLUMN MAIN LAYOUT */}
@@ -209,22 +247,28 @@ export default function FittingRoomPage() {
                                </Badge>
                              </div>
                          </h3>
+                         {analysisData.loose_clothing && (
+                           <div className="bg-amber-50 border border-amber-200 text-amber-800 px-3 py-2 rounded-lg mt-2 mb-3 text-xs flex items-center gap-2">
+                             <AlertCircle className="w-4 h-4 text-amber-600 shrink-0" />
+                               <p>Loose clothing detected. For accurate results, upload a fitted full-body image.</p>
+                           </div>
+                         )}
                          <div className="grid grid-cols-2 gap-2 text-sm">
                             <div className="bg-muted/50 p-2 rounded-lg">
                               <span className="text-muted-foreground text-xs block">Height</span>
-                              <span className="font-medium">{analysisData.measurements.height.toFixed(1)} cm</span>
+                              <span className="font-medium">{(analysisData.measurements?.height || 170).toFixed(1)} cm</span>
                             </div>
                             <div className="bg-muted/50 p-2 rounded-lg">
                               <span className="text-muted-foreground text-xs block">Bust</span>
-                              <span className="font-medium">{analysisData.measurements.bust.toFixed(1)} cm</span>
+                              <span className="font-medium">{(analysisData.measurements?.bust || 90).toFixed(1)} cm</span>
                             </div>
                             <div className="bg-muted/50 p-2 rounded-lg">
                               <span className="text-muted-foreground text-xs block">Waist</span>
-                              <span className="font-medium">{analysisData.measurements.waist.toFixed(1)} cm</span>
+                              <span className="font-medium">{(analysisData.measurements?.waist || 70).toFixed(1)} cm</span>
                             </div>
                             <div className="bg-muted/50 p-2 rounded-lg">
                               <span className="text-muted-foreground text-xs block">Hips</span>
-                              <span className="font-medium">{analysisData.measurements.hips.toFixed(1)} cm</span>
+                              <span className="font-medium">{(analysisData.measurements?.hips || 95).toFixed(1)} cm</span>
                             </div>
                          </div>
                          
@@ -313,11 +357,53 @@ export default function FittingRoomPage() {
                           onValueChange={(v) => handleMeasurementChange("hips", v[0])}
                         />
                       </div>
+                      <Button className="w-full mt-6 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700">
+                        Continue to Garments
+                      </Button>
                     </div>
                   </TabsContent>
                 </div>
               </Tabs>
             </div>
+            
+            {selectedGarment && !fitResults && (
+              <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 px-6 py-4 rounded-2xl mt-6 shadow-sm">
+                <h3 className="font-semibold text-indigo-900 mb-2">✨ Garment Selected</h3>
+                <p className="text-sm text-indigo-700 mb-4">{selectedGarment.title || selectedGarment.name} (Size {selectedSize}) is ready for analysis.</p>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-xl h-12 font-semibold">
+                      Analyze Fit & Get Recommendations
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-5xl bg-gradient-to-b from-background to-muted/30 border-border/50 shadow-2xl p-0 overflow-hidden max-h-[90vh] flex flex-col rounded-3xl mx-auto w-[95vw]">
+                    <DialogHeader className="p-6 pb-4 border-b border-border/50 bg-background/80 backdrop-blur-md z-10 sticky top-0 flex flex-row items-start justify-between">
+                      <div>
+                        <DialogTitle className="text-2xl md:text-3xl flex items-center gap-3 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
+                          <Sparkles className="w-7 h-7 text-indigo-500" />
+                          Fit Analysis Not Yet Available
+                        </DialogTitle>
+                        <DialogDescription className="text-base text-muted-foreground mt-1">
+                          We're preparing detailed analysis for {selectedGarment.title || selectedGarment.name}.
+                        </DialogDescription>
+                      </div>
+                      <DialogClose className="rounded-lg opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6l-12 12"/><path d="M6 6l12 12"/></svg>
+                      </DialogClose>
+                    </DialogHeader>
+                    <div className="flex-1 overflow-y-auto p-6">
+                      <div className="flex flex-col items-center justify-center gap-4 py-12">
+                        <div className="relative w-16 h-16">
+                          <div className="absolute inset-0 rounded-full border-4 border-indigo-200 border-t-indigo-600 animate-spin"></div>
+                        </div>
+                        <p className="text-muted-foreground text-center">Loading fit predictions and style recommendations...</p>
+                        <p className="text-xs text-muted-foreground/70 text-center">This may take a few moments</p>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            )}
             
             {fitResults && selectedGarment && (
               <>
@@ -346,59 +432,180 @@ export default function FittingRoomPage() {
                     </div>
                   </div>
                 )}
-              <div className="bg-card border-none ring-1 ring-primary/20 rounded-2xl overflow-hidden shadow-md flex-shrink-0 mt-4 mb-4">
-                 <div className="p-3 bg-primary/10 border-b border-primary/20 flex items-center justify-between">
-                   <h3 className="font-semibold text-sm text-primary flex items-center gap-2">
-                     <Sparkles className="w-4 h-4"/> Fit Prediction
-                   </h3>
-                 </div>
-                 <div className="p-0">
-                   <FitPredictionCard garment={selectedGarment} size={selectedSize} fitData={fitResults} />
-                 </div>
-                 
-                 <div className="p-0 border-t border-border/50">
-                    <FitAnalysisPanel 
-                      userMeasurements={combinedMeasurements} 
-                      productMeasurements={selectedGarment.specifications?.sizes?.[selectedSize] || {}} 
-                      selectedSize={selectedSize}
-                    />
-                 </div>
-                 {(styleRecs || colorRecs) && (
-                   <div className="p-4 bg-gradient-to-br from-indigo-500/5 to-purple-500/10 border-t border-border/50">
-                     <Dialog>
-                       <DialogTrigger asChild>
-                         <Button 
-                           className="w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white shadow-md shadow-fuchsia-500/20 border-0 rounded-xl h-12 text-sm font-semibold flex items-center justify-center gap-2 group transition-all"
-                         >
-                           <Sparkles className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                           View Your Personalized Matches
-                         </Button>
-                       </DialogTrigger>
-                       <DialogContent className="max-w-4xl bg-gradient-to-b from-background to-muted/20 border-border/50 shadow-2xl p-0 overflow-hidden max-h-[85vh] flex flex-col sm:rounded-2xl rounded-xl">
-                         <DialogHeader className="p-6 pb-4 border-b border-border/50 bg-background/80 backdrop-blur-sm z-10">
-                           <DialogTitle className="text-2xl flex items-center gap-2 font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600">
-                             <Sparkles className="w-6 h-6 text-fuchsia-500" />
-                             Your Personal Style Profile
-                           </DialogTitle>
-                           <DialogDescription className="text-[15px]">
-                             Based on your body analysis and skin tone, we've curated the perfect styles and colors just for you.
-                           </DialogDescription>
-                         </DialogHeader>
-                         
-                         <div className="overflow-y-auto flex-1 p-6 px-4 md:px-6 custom-scrollbar bg-card/30">
-                           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6">
-                             <div className="h-full">
-                               {(styleRecs || recsLoading) && <StyleRecommendationCard data={styleRecs?.profile} loading={recsLoading} />}
+                
+              <div className="mt-6 mb-4">
+                 <Dialog>
+                   <DialogTrigger asChild>
+                     <Button 
+                       className="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white shadow-lg shadow-indigo-500/25 border-0 rounded-2xl h-14 text-base font-bold flex items-center justify-center gap-3 group transition-all"
+                     >
+                       <Sparkles className="w-5 h-5 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
+                       Check Predictions & Fit
+                     </Button>
+                   </DialogTrigger>
+                   <DialogContent className="max-w-5xl bg-gradient-to-b from-background to-muted/30 border-border/50 shadow-2xl p-0 overflow-hidden max-h-[90vh] flex flex-col rounded-3xl mx-auto w-[95vw]">
+                     <DialogHeader className="p-6 pb-4 border-b border-border/50 bg-background/80 backdrop-blur-md z-10 sticky top-0 flex flex-row items-start justify-between">
+                       <div>
+                         <DialogTitle className="text-2xl md:text-3xl flex items-center gap-3 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
+                           <Sparkles className="w-7 h-7 text-indigo-500" />
+                           Complete Fit & Style Analysis
+                         </DialogTitle>
+                         <DialogDescription className="text-base text-muted-foreground mt-1">
+                           See how {selectedGarment.title || selectedGarment.name} (Size {selectedSize}) will fit your unique body measurements.
+                         </DialogDescription>
+                       </div>
+                     </DialogHeader>
+                     
+                     <div className="overflow-y-auto flex-1 p-6 custom-scrollbar">
+                       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                         {/* Left Side: Garment Details & Fit Prediction */}
+                         <div className="lg:col-span-7 flex flex-col gap-6">
+                           
+                           {/* Garment Interactive Header */}
+                           <div className="bg-card border border-border/50 rounded-2xl shadow-lg overflow-hidden flex flex-col sm:flex-row items-center gap-6 p-6 relative">
+                             <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-bl-full -z-10 blur-xl" />
+                             
+                             <div className="w-32 h-40 bg-muted/30 rounded-xl overflow-hidden shrink-0 border border-border/50 shadow-inner relative flex items-center justify-center">
+                               {selectedGarment.image_url || selectedGarment.image || (selectedGarment.images && selectedGarment.images[0]) ? (
+                                 <img 
+                                   src={selectedGarment.image_url || selectedGarment.image || selectedGarment.images?.[0]} 
+                                   alt={selectedGarment.title || selectedGarment.name} 
+                                   className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
+                                   onError={(e) => {
+                                     (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&q=80&w=400&h=500';
+                                   }}
+                                 />
+                               ) : (
+                                 <div className="text-muted-foreground"><ShoppingBag className="w-8 h-8 opacity-20"/></div>
+                               )}
                              </div>
-                             <div className="h-full">
-                               {(colorRecs || recsLoading) && <ColorRecommendationCard data={colorRecs} loading={recsLoading} />}
+                             
+                             <div className="flex-1 flex flex-col justify-between p-2 w-full">
+                               <div>
+                                 <Badge variant="outline" className="mb-2 text-[10px] font-semibold bg-primary/5 text-primary border-primary/20">
+                                   {selectedGarment.category || "Apparel"}
+                                 </Badge>
+                                 <h2 className="text-xl md:text-2xl font-bold leading-tight line-clamp-2">
+                                   {selectedGarment.title || selectedGarment.name}
+                                 </h2>
+                                 <p className="text-sm text-muted-foreground mt-1">
+                                   {selectedGarment.brand || "FitVerse Connect"}
+                                 </p>
+                               </div>
+                               
+                               <div className="space-y-3 mt-4">
+                                 <div className="flex items-center justify-between">
+                                   <label className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Select Size</label>
+                                   <span className="text-xs font-medium text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-100">Currently: <span className="font-bold">{selectedSize}</span></span>
+                                 </div>
+                                 <div className="flex flex-wrap gap-2">
+                                   {(selectedGarment.sizes || ["XS", "S", "M", "L", "XL", "XXL"]).map((sz) => (
+                                     <button
+                                       key={sz}
+                                       onClick={() => setSelectedSize(sz as string)}
+                                       className={`h-10 min-w-10 px-3 rounded-xl border flex items-center justify-center text-sm font-bold transition-all duration-200 ${
+                                         selectedSize === sz 
+                                           ? "border-indigo-600 bg-indigo-600 text-white shadow-md shadow-indigo-500/30 scale-105" 
+                                           : "border-border/60 bg-background text-foreground hover:border-indigo-400 hover:bg-indigo-50 hover:text-indigo-700"
+                                       }`}
+                                     >
+                                       {sz}
+                                     </button>
+                                   ))}
+                                 </div>
+                               </div>
                              </div>
                            </div>
+
+                           {/* AI Fit Prediction Module */}
+                           <div className="bg-card border border-border/50 rounded-2xl shadow-sm overflow-hidden relative group">
+                             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 pointer-events-none" />
+                             <div className="p-5 border-b border-border/50 relative z-10 bg-background/50 flex justify-between items-center">
+                               <h3 className="font-semibold text-lg flex items-center gap-2">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-500"><path d="M20.38 3.46L16 2a8 8 0 0 0-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+                                 AI Fit Prediction
+                               </h3>
+                               {fitLoading && (
+                                 <span className="flex h-3 w-3 relative">
+                                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                                   <span className="relative inline-flex rounded-full h-3 w-3 bg-indigo-500"></span>
+                                 </span>
+                               )}
+                             </div>
+                             <div className="relative z-10 transition-opacity duration-300" style={{ opacity: fitLoading ? 0.6 : 1 }}>
+                               <FitPredictionCard garment={selectedGarment} size={selectedSize} fitData={fitResults} />
+                             </div>
+                           </div>
+
+                           <div className="bg-card border border-border/50 rounded-2xl shadow-sm overflow-hidden relative">
+                             <div className="p-5 border-b border-border/50 bg-background/50">
+                               <h3 className="font-semibold text-lg flex items-center gap-2">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-500"><path d="M3 10h18"/><path d="M3 14h18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 3v18"/><path d="M16 3v18"/></svg>
+                                 Detailed Measurements Analysis
+                               </h3>
+                             </div>
+                             <FitAnalysisPanel 
+                               userMeasurements={combinedMeasurements} 
+                               productMeasurements={selectedGarment.specifications?.sizes?.[selectedSize] || {}} 
+                               selectedSize={selectedSize}
+                             />
+                           </div>
                          </div>
-                       </DialogContent>
-                     </Dialog>
-                   </div>
-                 )}
+
+                         {/* Right Side: Style & Colors */}
+                         <div className="lg:col-span-5 flex flex-col gap-6">
+                           {(styleRecs || colorRecs) ? (
+                             <>
+                               {styleRecs && (
+                                 <div className="bg-card border border-border/50 rounded-2xl shadow-sm overflow-hidden h-fit">
+                                   <div className="p-5 border-b border-border/50 bg-background/50">
+                                     <h3 className="font-semibold text-lg flex items-center gap-2">
+                                       <Heart className="w-4 h-4 text-rose-500" /> Style Matches
+                                     </h3>
+                                   </div>
+                                   <StyleRecommendationCard data={styleRecs?.profile} loading={recsLoading} />
+                                 </div>
+                               )}
+                               {colorRecs && (
+                                 <div className="bg-card border border-border/50 rounded-2xl shadow-sm overflow-hidden h-fit">
+                                   <div className="p-5 border-b border-border/50 bg-background/50">
+                                     <h3 className="font-semibold text-lg flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-teal-500"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg> 
+                                        Color Palette
+                                     </h3>
+                                   </div>
+                                   <ColorRecommendationCard data={colorRecs} loading={recsLoading} />
+                                 </div>
+                               )}
+                             </>
+                           ) : (
+                             <div className="bg-card border border-border/50 rounded-2xl p-8 flex flex-col items-center justify-center text-center h-full min-h-[300px] shadow-sm">
+                               <div className="w-16 h-16 rounded-full bg-muted/50 flex items-center justify-center mb-4">
+                                 <Sparkles className="w-8 h-8 text-muted-foreground opacity-50" />
+                               </div>
+                               <h3 className="font-semibold text-lg mb-2">Style Recommendations Upcoming</h3>
+                               <p className="text-muted-foreground text-sm max-w-[250px]">
+                                 Complete your AI Setup to unlock personalized styling and color recommendations.
+                               </p>
+                             </div>
+                           )}
+                         </div>
+                       </div>
+                     </div>
+                     
+                     <div className="p-4 border-t border-border/50 bg-background/80 backdrop-blur-md flex justify-end gap-3 sticky bottom-0">
+                       <DialogClose asChild>
+                         <Button variant="outline" className="rounded-xl">Close</Button>
+                       </DialogClose>
+                       <Button 
+                         onClick={handleAddToWishlist} 
+                         className="rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 flex items-center gap-2"
+                       >
+                         <ShoppingBag className="w-4 h-4" /> Save to Wishlist
+                       </Button>
+                     </div>
+                   </DialogContent>
+                 </Dialog>
               </div>
             </>
             )}
@@ -428,7 +635,9 @@ export default function FittingRoomPage() {
               <div className="flex-1 bg-gradient-to-b from-muted/30 to-muted/60 rounded-3xl border border-border/50 overflow-hidden relative shadow-inner min-h-[400px] lg:min-h-0 flex flex-col justify-center">
                 {viewMode === "3d" ? (
                   <AvatarViewer
-                      bodyType={combinedMeasurements.body_type || bodyType}                        gender={combinedMeasurements.gender}                      skinToneHsl={combinedMeasurements.skin_tone_hsl || SKIN_TONES[skinTone].hsl}
+                      bodyType={combinedMeasurements.body_type || bodyType}
+                      gender={combinedMeasurements.gender}
+                      skinToneHsl={combinedMeasurements.skin_tone_hsl || SKIN_TONES[skinTone].hsl}
                       measurements={combinedMeasurements}
                       garment={selectedGarment}
                     />
@@ -474,9 +683,11 @@ export default function FittingRoomPage() {
                             </div>
                           </div>
                         </div>
-                        <div className="flex-1 w-full h-full relative relative">
+                        <div className="flex-1 w-full h-full relative">
                           <AvatarViewer
-                      bodyType={combinedMeasurements.body_type || bodyType}                        gender={combinedMeasurements.gender}                      skinToneHsl={combinedMeasurements.skin_tone_hsl || SKIN_TONES[skinTone].hsl}
+                      bodyType={combinedMeasurements.body_type || bodyType}
+                      gender={combinedMeasurements.gender}
+                      skinToneHsl={combinedMeasurements.skin_tone_hsl || SKIN_TONES[skinTone].hsl}
                       measurements={combinedMeasurements}
                       garment={selectedGarment}
                     />
@@ -544,16 +755,16 @@ export default function FittingRoomPage() {
                  </div>
               </div>
               
-              <div className="p-4 overflow-y-auto flex-1 custom-scrollbar">
-                 <GarmentGrid 
-                   measurementId={analysisData?.measurement_id}
-                   onSelectGarment={handleGarmentSelect}
-                   categoryFilter={category !== "All" ? category.toLowerCase() : undefined}
-                 />
+              <div className="flex-1 overflow-y-auto custom-scrollbar flex flex-col">
+                <GarmentGrid 
+                  onSelectGarment={handleGarmentSelect}
+                  selectedGarment={selectedGarment}
+                  categoryFilter={category}
+                  userMeasurements={combinedMeasurements}
+                />
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </div>
