@@ -14,6 +14,7 @@
 **Home page**
 <img width="1897" height="917" alt="image" src="https://github.com/user-attachments/assets/6d350c89-7bfd-459e-ad2b-9684b80740c0" />
 
+**Fitting Room**
 <img width="1903" height="934" alt="image" src="https://github.com/user-attachments/assets/a5cc5ce7-73f6-41d2-b703-9b2f72064d8f" />
 
 <img width="1906" height="911" alt="image" src="https://github.com/user-attachments/assets/8cb27869-8b23-4702-9c6c-a2ca7c92c80e" />
@@ -22,8 +23,10 @@
 
 <img width="1919" height="907" alt="image" src="https://github.com/user-attachments/assets/5bb76e16-2f34-43c7-9218-0a5b38e9c247" />
 
+**Wardrobe**
 <img width="1898" height="920" alt="image" src="https://github.com/user-attachments/assets/c9259b64-32b0-44a0-aee2-e6f5e7306f26" />
 
+**Size Guide**
 <img width="1904" height="918" alt="image" src="https://github.com/user-attachments/assets/cb4c9413-90ad-40e2-96d9-42f5aed6bdd0" />
 
 
