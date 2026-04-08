@@ -52,7 +52,8 @@ export const FittingRoomProvider = ({ children }: { children: ReactNode }) => {
         setLoading(true);
         console.log("[Avatar API] Calling generate-avatar with", bodyMeasurements);
         // Note: Currently calling the existing api (which we added the backend for)
-        const res = await fetch("http://localhost:8000/api/v1/generate-avatar", {
+        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const res = await fetch(`${API_URL}/api/v1/generate-avatar`, {
            method: "POST",
            headers: { "Content-Type": "application/json" },
            body: JSON.stringify({ measurements: bodyMeasurements })
